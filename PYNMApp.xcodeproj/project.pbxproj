@@ -16,6 +16,7 @@
 		A5D2153F2C884BC3009E1766 /* sign2.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153B2C884BC3009E1766 /* sign2.svg */; };
 		A5D215402C884BC3009E1766 /* sign3.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153C2C884BC3009E1766 /* sign3.svg */; };
 		A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215442C884CC3009E1766 /* FontExtension.swift */; };
+		A5D215472C884F4C009E1766 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215462C884F4C009E1766 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A5D2153B2C884BC3009E1766 /* sign2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign2.svg; sourceTree = "<group>"; };
 		A5D2153C2C884BC3009E1766 /* sign3.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign3.svg; sourceTree = "<group>"; };
 		A5D215442C884CC3009E1766 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		A5D215462C884F4C009E1766 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				A5D215442C884CC3009E1766 /* FontExtension.swift */,
+				A5D215462C884F4C009E1766 /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */,
 				A5D2152E2C882887009E1766 /* ContentView.swift in Sources */,
 				A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */,
+				A5D215472C884F4C009E1766 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

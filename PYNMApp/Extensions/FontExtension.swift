@@ -5,46 +5,33 @@
 //  Created by Yujin Son on 9/4/24.
 //
 
+import Foundation
 import SwiftUI
 
+extension Font {
 
-// make color extension
+// MARK: Bold
+static let pretendBold28: Font = .custom("Pretendard-Bold", size: 28)
+static let pretendBold24: Font = .custom("Pretendard-Bold", size: 24)
+static let pretendBold20: Font = .custom("Pretendard-Bold", size: 20)
+static let pretendBold18: Font = .custom("Pretendard-Bold", size: 18)
+static let pretendBold14: Font = .custom("Pretendard-Bold", size: 14)
 
-extension Color {
-    //MARK: App System color
-    static let blue1 = Color(hex: "00B2FF")
-    static let blue2 = Color(hex: "F7FDFF")
-    static let blue3 = Color(hex: "68D2FF")
-    static let blue4 = Color(hex: "EAF9FF")
-    static let blue5 = Color(hex: "2C90FA")
-    
-    //MARK: Gray Scale
-    static let gray1 = Color(hex: "6D6D6D")
-    static let gray2 = Color(hex: "7F7F7F")
-    static let gray3 = Color(hex: "D0D0D0")
-    static let gray4 = Color(hex: "F4F4F4")
-    
+// MARK: SemiBold
+static let pretendSemiBold30: Font = .custom("Pretendard-SemiBold", size: 30)
+static let pretendSemiBold28: Font = .custom("Pretendard-SemiBold", size: 28)
+static let pretendSemiBold16: Font = .custom("Pretendard-SemiBold", size: 16)
 
- 
-    static let peach = Color(hex: "ff8882")
-    static let ivory = Color(hex: "f8ede3")
-    static let brown = Color(hex: "897853")
+// MARK: Medium
+static let pretendMedium24: Font = .custom("Pretendard-Medium", size: 24)
+static let pretendMedium20: Font = .custom("Pretendard-Medium", size: 20)
+static let pretendMedium18: Font = .custom("Pretendard-Medium", size: 18)
+static let pretendMedium16: Font = .custom("Pretendard-Medium", size: 16)
+
+// MARK: Regular
+static let pretendRegular14: Font = .custom("Pretendard-Regular", size: 14)
+static let pretendRegular16: Font = .custom("Pretendard-Regular", size: 16)
+
 }
 
-//  UIColor Hex code extension
-
-extension Color {
-  init(hex: String) {
-    let scanner = Scanner(string: hex)
-    _ = scanner.scanString("#")
-    
-    var rgb: UInt64 = 0
-    scanner.scanHexInt64(&rgb)
-    
-    let r = Double((rgb >> 16) & 0xFF) / 255.0
-    let g = Double((rgb >>  8) & 0xFF) / 255.0
-    let b = Double((rgb >>  0) & 0xFF) / 255.0
-    self.init(red: r, green: g, blue: b)
-  }
-}
 
