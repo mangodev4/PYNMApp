@@ -16,15 +16,24 @@ struct CardDetailView: View {
             Image(card.imageName)
                 .resizable()
                 .scaledToFit()
-                .frame(height: 300)
+                .frame(height: 350)
                 .padding()
             
-            Button("Change Image") {
-                let newImageName = "newSign"
-                viewModel.updateCardImage(id: card.id, newImageName: newImageName)
+            Text(card.imageName)
+                .font(.largeTitle)
+            
+            Text("000-0000-0000")
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+
+            
+            Button("Save") {
+//                let newImageName = "newSign"
+//                viewModel.updateCardImage(id: card.id, newImageName: newImageName)
+                viewModel.updateCardOpacity(id: card.id, opacity: 1.0)
+
             }
             .padding()
         }
-        .navigationTitle("Card Detail")
+        .navigationTitle("가게 정보")
     }
 }

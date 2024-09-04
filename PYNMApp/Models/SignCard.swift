@@ -10,4 +10,5 @@ import Foundation
 struct Card: Identifiable {
     let id = UUID()
     var imageName: String
+    var opacity: Double = 0.3
 }

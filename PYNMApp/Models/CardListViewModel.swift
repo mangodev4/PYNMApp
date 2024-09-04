@@ -20,4 +20,10 @@ class CardListViewModel: ObservableObject {
             cards[index].imageName = newImageName
         }
     }
+    
+    func updateCardOpacity(id: UUID, opacity: Double) {
+        if let index = cards.firstIndex(where: { $0.id == id }) {
+            cards[index].opacity = opacity
+        }
+    }
 }

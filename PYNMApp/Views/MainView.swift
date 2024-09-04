@@ -18,10 +18,11 @@ struct MainView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(height: 100)
+                        .opacity(card.opacity)
                         .padding()
                 }
             }
-            .navigationTitle("Cards")
+            .navigationTitle("평양냉면")
         }
     }
 }
