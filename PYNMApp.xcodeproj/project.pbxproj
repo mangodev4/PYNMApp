@@ -21,6 +21,8 @@
 		A5D2154E2C884FC1009E1766 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5D215492C884FC1009E1766 /* Pretendard-Medium.otf */; };
 		A5D2154F2C884FC1009E1766 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5D2154A2C884FC1009E1766 /* Pretendard-Regular.otf */; };
 		A5D215502C884FC1009E1766 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5D2154B2C884FC1009E1766 /* Pretendard-SemiBold.otf */; };
+		A5D215542C8851C0009E1766 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215532C8851C0009E1766 /* HapticManager.swift */; };
+		A5D215582C8858C4009E1766 /* SignCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215572C8858C4009E1766 /* SignCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		A5D2154A2C884FC1009E1766 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		A5D2154B2C884FC1009E1766 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		A5D215512C885029009E1766 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A5D215532C8851C0009E1766 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		A5D215572C8858C4009E1766 /* SignCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +76,13 @@
 		A5D2152A2C882887009E1766 /* PYNMApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5D215562C885846009E1766 /* Models */,
+				A5D215552C88520D009E1766 /* Views */,
+				A5D215522C8851AE009E1766 /* Managers */,
 				A5D215512C885029009E1766 /* Info.plist */,
 				A5D215432C884C9D009E1766 /* Extensions */,
 				A5D215412C884BC9009E1766 /* Resources */,
 				A5D2152B2C882887009E1766 /* PYNMAppApp.swift */,
-				A5D2152D2C882887009E1766 /* ContentView.swift */,
 				A5D2152F2C882889009E1766 /* Assets.xcassets */,
 				A5D215312C882889009E1766 /* Preview Content */,
 			);
@@ -129,6 +135,30 @@
 				A5D2154B2C884FC1009E1766 /* Pretendard-SemiBold.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		A5D215522C8851AE009E1766 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215532C8851C0009E1766 /* HapticManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A5D215552C88520D009E1766 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5D2152D2C882887009E1766 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5D215562C885846009E1766 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215572C8858C4009E1766 /* SignCard.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D215582C8858C4009E1766 /* SignCard.swift in Sources */,
 				A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */,
+				A5D215542C8851C0009E1766 /* HapticManager.swift in Sources */,
 				A5D2152E2C882887009E1766 /* ContentView.swift in Sources */,
 				A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */,
 				A5D215472C884F4C009E1766 /* ColorExtension.swift in Sources */,
