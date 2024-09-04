@@ -11,6 +11,10 @@
 		A5D2152E2C882887009E1766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152D2C882887009E1766 /* ContentView.swift */; };
 		A5D215302C882889009E1766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D2152F2C882889009E1766 /* Assets.xcassets */; };
 		A5D215332C882889009E1766 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D215322C882889009E1766 /* Preview Assets.xcassets */; };
+		A5D2153D2C884BC3009E1766 /* sign1.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D215392C884BC3009E1766 /* sign1.svg */; };
+		A5D2153E2C884BC3009E1766 /* sign4.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153A2C884BC3009E1766 /* sign4.svg */; };
+		A5D2153F2C884BC3009E1766 /* sign2.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153B2C884BC3009E1766 /* sign2.svg */; };
+		A5D215402C884BC3009E1766 /* sign3.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153C2C884BC3009E1766 /* sign3.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		A5D2152D2C882887009E1766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A5D2152F2C882889009E1766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5D215322C882889009E1766 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A5D215392C884BC3009E1766 /* sign1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign1.svg; sourceTree = "<group>"; };
+		A5D2153A2C884BC3009E1766 /* sign4.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign4.svg; sourceTree = "<group>"; };
+		A5D2153B2C884BC3009E1766 /* sign2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign2.svg; sourceTree = "<group>"; };
+		A5D2153C2C884BC3009E1766 /* sign3.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign3.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 		A5D2152A2C882887009E1766 /* PYNMApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5D215412C884BC9009E1766 /* Resources */,
 				A5D2152B2C882887009E1766 /* PYNMAppApp.swift */,
 				A5D2152D2C882887009E1766 /* ContentView.swift */,
 				A5D2152F2C882889009E1766 /* Assets.xcassets */,
@@ -65,6 +74,25 @@
 				A5D215322C882889009E1766 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A5D215412C884BC9009E1766 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215422C884BD5009E1766 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A5D215422C884BD5009E1766 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215392C884BC3009E1766 /* sign1.svg */,
+				A5D2153B2C884BC3009E1766 /* sign2.svg */,
+				A5D2153C2C884BC3009E1766 /* sign3.svg */,
+				A5D2153A2C884BC3009E1766 /* sign4.svg */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +153,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D2153E2C884BC3009E1766 /* sign4.svg in Resources */,
+				A5D215402C884BC3009E1766 /* sign3.svg in Resources */,
 				A5D215332C882889009E1766 /* Preview Assets.xcassets in Resources */,
+				A5D2153D2C884BC3009E1766 /* sign1.svg in Resources */,
+				A5D2153F2C884BC3009E1766 /* sign2.svg in Resources */,
 				A5D215302C882889009E1766 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
