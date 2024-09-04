@@ -15,6 +15,7 @@
 		A5D2153E2C884BC3009E1766 /* sign4.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153A2C884BC3009E1766 /* sign4.svg */; };
 		A5D2153F2C884BC3009E1766 /* sign2.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153B2C884BC3009E1766 /* sign2.svg */; };
 		A5D215402C884BC3009E1766 /* sign3.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153C2C884BC3009E1766 /* sign3.svg */; };
+		A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215442C884CC3009E1766 /* FontExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A5D2153A2C884BC3009E1766 /* sign4.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign4.svg; sourceTree = "<group>"; };
 		A5D2153B2C884BC3009E1766 /* sign2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign2.svg; sourceTree = "<group>"; };
 		A5D2153C2C884BC3009E1766 /* sign3.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign3.svg; sourceTree = "<group>"; };
+		A5D215442C884CC3009E1766 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		A5D2152A2C882887009E1766 /* PYNMApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5D215432C884C9D009E1766 /* Extensions */,
 				A5D215412C884BC9009E1766 /* Resources */,
 				A5D2152B2C882887009E1766 /* PYNMAppApp.swift */,
 				A5D2152D2C882887009E1766 /* ContentView.swift */,
@@ -93,6 +96,14 @@
 				A5D2153A2C884BC3009E1766 /* sign4.svg */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		A5D215432C884C9D009E1766 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215442C884CC3009E1766 /* FontExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */,
 				A5D2152E2C882887009E1766 /* ContentView.swift in Sources */,
 				A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */,
 			);
