@@ -11,6 +11,16 @@
 		A5D2152E2C882887009E1766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152D2C882887009E1766 /* ContentView.swift */; };
 		A5D215302C882889009E1766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D2152F2C882889009E1766 /* Assets.xcassets */; };
 		A5D215332C882889009E1766 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D215322C882889009E1766 /* Preview Assets.xcassets */; };
+		A5D2153D2C884BC3009E1766 /* sign1.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D215392C884BC3009E1766 /* sign1.svg */; };
+		A5D2153E2C884BC3009E1766 /* sign4.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153A2C884BC3009E1766 /* sign4.svg */; };
+		A5D2153F2C884BC3009E1766 /* sign2.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153B2C884BC3009E1766 /* sign2.svg */; };
+		A5D215402C884BC3009E1766 /* sign3.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153C2C884BC3009E1766 /* sign3.svg */; };
+		A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215442C884CC3009E1766 /* FontExtension.swift */; };
+		A5D215472C884F4C009E1766 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215462C884F4C009E1766 /* ColorExtension.swift */; };
+		A5D2154D2C884FC1009E1766 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5D215482C884FC1009E1766 /* Pretendard-Bold.otf */; };
+		A5D2154E2C884FC1009E1766 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5D215492C884FC1009E1766 /* Pretendard-Medium.otf */; };
+		A5D2154F2C884FC1009E1766 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5D2154A2C884FC1009E1766 /* Pretendard-Regular.otf */; };
+		A5D215502C884FC1009E1766 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5D2154B2C884FC1009E1766 /* Pretendard-SemiBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,17 @@
 		A5D2152D2C882887009E1766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A5D2152F2C882889009E1766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5D215322C882889009E1766 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A5D215392C884BC3009E1766 /* sign1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign1.svg; sourceTree = "<group>"; };
+		A5D2153A2C884BC3009E1766 /* sign4.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign4.svg; sourceTree = "<group>"; };
+		A5D2153B2C884BC3009E1766 /* sign2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign2.svg; sourceTree = "<group>"; };
+		A5D2153C2C884BC3009E1766 /* sign3.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign3.svg; sourceTree = "<group>"; };
+		A5D215442C884CC3009E1766 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		A5D215462C884F4C009E1766 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		A5D215482C884FC1009E1766 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		A5D215492C884FC1009E1766 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		A5D2154A2C884FC1009E1766 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		A5D2154B2C884FC1009E1766 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		A5D215512C885029009E1766 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +72,9 @@
 		A5D2152A2C882887009E1766 /* PYNMApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5D215512C885029009E1766 /* Info.plist */,
+				A5D215432C884C9D009E1766 /* Extensions */,
+				A5D215412C884BC9009E1766 /* Resources */,
 				A5D2152B2C882887009E1766 /* PYNMAppApp.swift */,
 				A5D2152D2C882887009E1766 /* ContentView.swift */,
 				A5D2152F2C882889009E1766 /* Assets.xcassets */,
@@ -65,6 +89,46 @@
 				A5D215322C882889009E1766 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A5D215412C884BC9009E1766 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5D2154C2C884FC1009E1766 /* Font */,
+				A5D215422C884BD5009E1766 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A5D215422C884BD5009E1766 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215392C884BC3009E1766 /* sign1.svg */,
+				A5D2153B2C884BC3009E1766 /* sign2.svg */,
+				A5D2153C2C884BC3009E1766 /* sign3.svg */,
+				A5D2153A2C884BC3009E1766 /* sign4.svg */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A5D215432C884C9D009E1766 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215442C884CC3009E1766 /* FontExtension.swift */,
+				A5D215462C884F4C009E1766 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5D2154C2C884FC1009E1766 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215482C884FC1009E1766 /* Pretendard-Bold.otf */,
+				A5D215492C884FC1009E1766 /* Pretendard-Medium.otf */,
+				A5D2154A2C884FC1009E1766 /* Pretendard-Regular.otf */,
+				A5D2154B2C884FC1009E1766 /* Pretendard-SemiBold.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +189,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D2153E2C884BC3009E1766 /* sign4.svg in Resources */,
+				A5D215402C884BC3009E1766 /* sign3.svg in Resources */,
+				A5D2154D2C884FC1009E1766 /* Pretendard-Bold.otf in Resources */,
+				A5D2154E2C884FC1009E1766 /* Pretendard-Medium.otf in Resources */,
+				A5D2154F2C884FC1009E1766 /* Pretendard-Regular.otf in Resources */,
 				A5D215332C882889009E1766 /* Preview Assets.xcassets in Resources */,
+				A5D2153D2C884BC3009E1766 /* sign1.svg in Resources */,
+				A5D215502C884FC1009E1766 /* Pretendard-SemiBold.otf in Resources */,
+				A5D2153F2C884BC3009E1766 /* sign2.svg in Resources */,
 				A5D215302C882889009E1766 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */,
 				A5D2152E2C882887009E1766 /* ContentView.swift in Sources */,
 				A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */,
+				A5D215472C884F4C009E1766 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +349,13 @@
 				DEVELOPMENT_TEAM = HH4G2BS7C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PYNMApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +363,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MGO1.PYNMApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,11 +384,13 @@
 				DEVELOPMENT_TEAM = HH4G2BS7C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PYNMApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +398,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MGO1.PYNMApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
