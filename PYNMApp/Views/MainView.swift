@@ -12,23 +12,32 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.cards) { card in
-                NavigationLink(destination: CardDetailView(viewModel: viewModel, card: card)) {
+            List {
+                ForEach(viewModel.cards) { card in
                     ZStack {
+                        NavigationLink(destination: CardDetailView(viewModel: viewModel, card: card)) {
+                            EmptyView()
+                        }
+                        .opacity(0)
+
                         Image(card.imageName)
                             .resizable()
                             .scaledToFill()
-                            .frame(height: 140)
+                            .cornerRadius(8)
+//                            .frame(height: 140)
                             .opacity(card.opacity)
 //                            .padding()
                     }
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 2)
+                    .padding(.vertical, 3)
+                    .padding(.horizontal, 5)
+
                 }
                 .buttonStyle(PlainButtonStyle())
+                .listRowInsets(EdgeInsets())
+                .listRowSeparator(.hidden)
             }
             .listStyle(PlainListStyle())
-            .listRowSeparator(.hidden)
             .navigationTitle("평양냉면")
         }
     }
