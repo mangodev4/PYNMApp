@@ -12,28 +12,45 @@ struct CardDetailView: View {
     var card: Card
     
     var body: some View {
-        VStack {
-            Image(card.imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 350)
-                .padding()
-            
-            Text(card.imageName)
-                .font(.largeTitle)
-            
-            Text("000-0000-0000")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-
-            
-            Button("Save") {
-//                let newImageName = "newSign"
-//                viewModel.updateCardImage(id: card.id, newImageName: newImageName)
-                viewModel.updateCardOpacity(id: card.id, opacity: 1.0)
-
+        ZStack {
+            Color(.red)
+                .edgesIgnoringSafeArea(.all)
+            ZStack {
+                RoundedRectangle(cornerRadius: 30, style: .continuous)
+                    .foregroundColor(.white)
+                    .clipShape(RoundedCorners(topLeft: 30, topRight: 30))
+                    .edgesIgnoringSafeArea(.bottom)
+                
+                VStack {
+                    Spacer()
+                    
+                    Image(card.imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 350)
+                        .padding()
+                    
+                    Text(card.imageName)
+                        .font(.largeTitle)
+                    
+                    Spacer()
+                    
+                    Text("000-0000-0000")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    
+                    Spacer()
+                    
+                    Button("Save") {
+                        //                let newImageName = "newSign"
+                        //                viewModel.updateCardImage(id: card.id, newImageName: newImageName)
+                        viewModel.updateCardOpacity(id: card.id, opacity: 1.0)
+                        
+                    }
+                    .padding()
+                }
             }
-            .padding()
+            .frame(maxHeight: .infinity)
         }
-        .navigationTitle("가게 정보")
+        //
     }
 }

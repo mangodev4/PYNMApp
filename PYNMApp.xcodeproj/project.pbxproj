@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A501E68D2C89500E00544E2E /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E68C2C89500E00544E2E /* RoundedCorners.swift */; };
 		A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152B2C882887009E1766 /* PYNMAppApp.swift */; };
 		A5D2152E2C882887009E1766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152D2C882887009E1766 /* ContentView.swift */; };
 		A5D215302C882889009E1766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D2152F2C882889009E1766 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A501E68C2C89500E00544E2E /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		A5D215282C882887009E1766 /* PYNMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYNMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D2152B2C882887009E1766 /* PYNMAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PYNMAppApp.swift; sourceTree = "<group>"; };
 		A5D2152D2C882887009E1766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				A5D2152B2C882887009E1766 /* PYNMAppApp.swift */,
 				A5D2152F2C882889009E1766 /* Assets.xcassets */,
 				A5D215312C882889009E1766 /* Preview Content */,
+				A501E68C2C89500E00544E2E /* RoundedCorners.swift */,
 			);
 			path = PYNMApp;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A501E68D2C89500E00544E2E /* RoundedCorners.swift in Sources */,
 				A5D2155E2C885A51009E1766 /* CardDetailView.swift in Sources */,
 				A5D215582C8858C4009E1766 /* SignCard.swift in Sources */,
 				A5D2155C2C8859D5009E1766 /* MainView.swift in Sources */,
