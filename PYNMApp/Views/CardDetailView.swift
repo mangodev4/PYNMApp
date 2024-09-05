@@ -47,6 +47,7 @@ struct CardDetailView: View {
                         //                let newImageName = "newSign"
                         //                viewModel.updateCardImage(id: card.id, newImageName: newImageName)
                         viewModel.updateCardOpacity(id: card.id, opacity: 1.0)
+                        presentationMode.wrappedValue.dismiss()
                         
                     }
                     .padding()
