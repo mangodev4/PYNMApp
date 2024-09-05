@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A501E68D2C89500E00544E2E /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E68C2C89500E00544E2E /* RoundedCorners.swift */; };
+		A501E68F2C89A78B00544E2E /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E68E2C89A78B00544E2E /* NavigationManager.swift */; };
 		A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152B2C882887009E1766 /* PYNMAppApp.swift */; };
 		A5D2152E2C882887009E1766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152D2C882887009E1766 /* ContentView.swift */; };
 		A5D215302C882889009E1766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D2152F2C882889009E1766 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		A501E68C2C89500E00544E2E /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		A501E68E2C89A78B00544E2E /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		A5D215282C882887009E1766 /* PYNMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYNMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D2152B2C882887009E1766 /* PYNMAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PYNMAppApp.swift; sourceTree = "<group>"; };
 		A5D2152D2C882887009E1766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				A5D215532C8851C0009E1766 /* HapticManager.swift */,
+				A501E68E2C89A78B00544E2E /* NavigationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A501E68F2C89A78B00544E2E /* NavigationManager.swift in Sources */,
 				A501E68D2C89500E00544E2E /* RoundedCorners.swift in Sources */,
 				A5D2155E2C885A51009E1766 /* CardDetailView.swift in Sources */,
 				A5D215582C8858C4009E1766 /* SignCard.swift in Sources */,
