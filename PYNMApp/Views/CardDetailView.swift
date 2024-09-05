@@ -13,55 +13,47 @@ struct CardDetailView: View {
     
     var body: some View {
         ZStack {
-            Color(.red)
+            Color(.black)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 0) {
-                Image(card.imageName)
-                    .resizable()
-                    .scaledToFit()
-//                    .frame(height: 300)
-                    .clipped()
+            ZStack {
+                RoundedRectangle(cornerRadius: 30, style: .continuous)
+                    .foregroundColor(.white)
+                    .clipShape(RoundedCorners(topLeft: 30, topRight: 30))
+                    .edgesIgnoringSafeArea(.bottom)
                 
-                ZStack {
-                    RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .foregroundColor(.white)
-                        .clipShape(RoundedCorners(topLeft: 30, topRight: 30))
-                        .edgesIgnoringSafeArea(.bottom)
+                VStack {
+                    Spacer()
                     
-                    VStack {
-                        Spacer()
-                        
-                        Image(card.imageName)
-                            .resizable()
-                            .scaledToFit()
-//                            .frame(height: 350)
-                            .padding()
-                        
-                        Text(card.imageName)
-                            .font(.largeTitle)
-                        
-                        Spacer()
-                        
-                        Text("000-0000-0000")
-                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                        
-                        Spacer()
-                        
-                        Button("Save") {
-                            //                let newImageName = "newSign"
-                            //                viewModel.updateCardImage(id: card.id, newImageName: newImageName)
-                            viewModel.updateCardOpacity(id: card.id, opacity: 1.0)
-                            
-                        }
+                    Image(card.imageName)
+                        .resizable()
+                        .scaledToFit()
+                    //                        .frame(height: 300)
                         .padding()
+                    
+                    Text(card.imageName)
+                        .font(.largeTitle)
+                    
+                    Spacer()
+                    
+                    Text("000-0000-0000")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    
+                    Spacer()
+                    
+                    Button("Save") {
+                        //                let newImageName = "newSign"
+                        //                viewModel.updateCardImage(id: card.id, newImageName: newImageName)
+                        viewModel.updateCardOpacity(id: card.id, opacity: 1.0)
+                        
                     }
+                    .padding()
                 }
-                .frame(maxHeight: .infinity)
             }
-            .edgesIgnoringSafeArea(.all)
+            .frame(maxHeight: .infinity)
         }
-        //
     }
+    //
 }
+
 
