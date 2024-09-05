@@ -11,6 +11,8 @@ struct CardDetailView: View {
     @ObservedObject var viewModel: CardListViewModel
     var card: Card
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ZStack {
             Color(.black)
@@ -52,8 +54,18 @@ struct CardDetailView: View {
             }
             .frame(maxHeight: .infinity)
         }
+        .navigationBarBackButtonHidden()
+        .navigationBarItems(leading: backButton)
     }
-    //
+    
+    
+    private var backButton: some View {
+        Button(action: {
+            presentationMode.wrappedValue.dismiss()
+        }) {
+            Image(systemName: "arrow.left")
+                .font(.title)
+                .foregroundColor(.white)
+        }
+    }
 }
-
-
