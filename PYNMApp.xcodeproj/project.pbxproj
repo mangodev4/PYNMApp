@@ -7,18 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A501E68D2C89500E00544E2E /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E68C2C89500E00544E2E /* RoundedCorners.swift */; };
+		A501E68F2C89A78B00544E2E /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E68E2C89A78B00544E2E /* NavigationManager.swift */; };
 		A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152B2C882887009E1766 /* PYNMAppApp.swift */; };
 		A5D2152E2C882887009E1766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152D2C882887009E1766 /* ContentView.swift */; };
 		A5D215302C882889009E1766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D2152F2C882889009E1766 /* Assets.xcassets */; };
 		A5D215332C882889009E1766 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D215322C882889009E1766 /* Preview Assets.xcassets */; };
+		A5D2153D2C884BC3009E1766 /* sign1.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D215392C884BC3009E1766 /* sign1.svg */; };
+		A5D2153E2C884BC3009E1766 /* sign4.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153A2C884BC3009E1766 /* sign4.svg */; };
+		A5D2153F2C884BC3009E1766 /* sign2.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153B2C884BC3009E1766 /* sign2.svg */; };
+		A5D215402C884BC3009E1766 /* sign3.svg in Resources */ = {isa = PBXBuildFile; fileRef = A5D2153C2C884BC3009E1766 /* sign3.svg */; };
+		A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215442C884CC3009E1766 /* FontExtension.swift */; };
+		A5D215472C884F4C009E1766 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215462C884F4C009E1766 /* ColorExtension.swift */; };
+		A5D2154D2C884FC1009E1766 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5D215482C884FC1009E1766 /* Pretendard-Bold.otf */; };
+		A5D2154E2C884FC1009E1766 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5D215492C884FC1009E1766 /* Pretendard-Medium.otf */; };
+		A5D2154F2C884FC1009E1766 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5D2154A2C884FC1009E1766 /* Pretendard-Regular.otf */; };
+		A5D215502C884FC1009E1766 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5D2154B2C884FC1009E1766 /* Pretendard-SemiBold.otf */; };
+		A5D215542C8851C0009E1766 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215532C8851C0009E1766 /* HapticManager.swift */; };
+		A5D215582C8858C4009E1766 /* SignCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215572C8858C4009E1766 /* SignCard.swift */; };
+		A5D2155A2C885997009E1766 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215592C885997009E1766 /* CardListViewModel.swift */; };
+		A5D2155C2C8859D5009E1766 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2155B2C8859D5009E1766 /* MainView.swift */; };
+		A5D2155E2C885A51009E1766 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2155D2C885A51009E1766 /* CardDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A501E68C2C89500E00544E2E /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		A501E68E2C89A78B00544E2E /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		A5D215282C882887009E1766 /* PYNMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYNMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D2152B2C882887009E1766 /* PYNMAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PYNMAppApp.swift; sourceTree = "<group>"; };
 		A5D2152D2C882887009E1766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A5D2152F2C882889009E1766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5D215322C882889009E1766 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A5D215392C884BC3009E1766 /* sign1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign1.svg; sourceTree = "<group>"; };
+		A5D2153A2C884BC3009E1766 /* sign4.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign4.svg; sourceTree = "<group>"; };
+		A5D2153B2C884BC3009E1766 /* sign2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign2.svg; sourceTree = "<group>"; };
+		A5D2153C2C884BC3009E1766 /* sign3.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sign3.svg; sourceTree = "<group>"; };
+		A5D215442C884CC3009E1766 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		A5D215462C884F4C009E1766 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		A5D215482C884FC1009E1766 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		A5D215492C884FC1009E1766 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		A5D2154A2C884FC1009E1766 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		A5D2154B2C884FC1009E1766 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		A5D215512C885029009E1766 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A5D215532C8851C0009E1766 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		A5D215572C8858C4009E1766 /* SignCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignCard.swift; sourceTree = "<group>"; };
+		A5D215592C885997009E1766 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
+		A5D2155B2C8859D5009E1766 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A5D2155D2C885A51009E1766 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +86,16 @@
 		A5D2152A2C882887009E1766 /* PYNMApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5D215562C885846009E1766 /* Models */,
+				A5D215552C88520D009E1766 /* Views */,
+				A5D215522C8851AE009E1766 /* Managers */,
+				A5D215512C885029009E1766 /* Info.plist */,
+				A5D215432C884C9D009E1766 /* Extensions */,
+				A5D215412C884BC9009E1766 /* Resources */,
 				A5D2152B2C882887009E1766 /* PYNMAppApp.swift */,
-				A5D2152D2C882887009E1766 /* ContentView.swift */,
 				A5D2152F2C882889009E1766 /* Assets.xcassets */,
 				A5D215312C882889009E1766 /* Preview Content */,
+				A501E68C2C89500E00544E2E /* RoundedCorners.swift */,
 			);
 			path = PYNMApp;
 			sourceTree = "<group>";
@@ -65,6 +106,74 @@
 				A5D215322C882889009E1766 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A5D215412C884BC9009E1766 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5D2154C2C884FC1009E1766 /* Font */,
+				A5D215422C884BD5009E1766 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A5D215422C884BD5009E1766 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215392C884BC3009E1766 /* sign1.svg */,
+				A5D2153B2C884BC3009E1766 /* sign2.svg */,
+				A5D2153C2C884BC3009E1766 /* sign3.svg */,
+				A5D2153A2C884BC3009E1766 /* sign4.svg */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A5D215432C884C9D009E1766 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215442C884CC3009E1766 /* FontExtension.swift */,
+				A5D215462C884F4C009E1766 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5D2154C2C884FC1009E1766 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215482C884FC1009E1766 /* Pretendard-Bold.otf */,
+				A5D215492C884FC1009E1766 /* Pretendard-Medium.otf */,
+				A5D2154A2C884FC1009E1766 /* Pretendard-Regular.otf */,
+				A5D2154B2C884FC1009E1766 /* Pretendard-SemiBold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		A5D215522C8851AE009E1766 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215532C8851C0009E1766 /* HapticManager.swift */,
+				A501E68E2C89A78B00544E2E /* NavigationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A5D215552C88520D009E1766 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5D2152D2C882887009E1766 /* ContentView.swift */,
+				A5D2155B2C8859D5009E1766 /* MainView.swift */,
+				A5D2155D2C885A51009E1766 /* CardDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5D215562C885846009E1766 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5D215572C8858C4009E1766 /* SignCard.swift */,
+				A5D215592C885997009E1766 /* CardListViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +234,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D2153E2C884BC3009E1766 /* sign4.svg in Resources */,
+				A5D215402C884BC3009E1766 /* sign3.svg in Resources */,
+				A5D2154D2C884FC1009E1766 /* Pretendard-Bold.otf in Resources */,
+				A5D2154E2C884FC1009E1766 /* Pretendard-Medium.otf in Resources */,
+				A5D2154F2C884FC1009E1766 /* Pretendard-Regular.otf in Resources */,
 				A5D215332C882889009E1766 /* Preview Assets.xcassets in Resources */,
+				A5D2153D2C884BC3009E1766 /* sign1.svg in Resources */,
+				A5D215502C884FC1009E1766 /* Pretendard-SemiBold.otf in Resources */,
+				A5D2153F2C884BC3009E1766 /* sign2.svg in Resources */,
 				A5D215302C882889009E1766 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +254,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A501E68F2C89A78B00544E2E /* NavigationManager.swift in Sources */,
+				A501E68D2C89500E00544E2E /* RoundedCorners.swift in Sources */,
+				A5D2155E2C885A51009E1766 /* CardDetailView.swift in Sources */,
+				A5D215582C8858C4009E1766 /* SignCard.swift in Sources */,
+				A5D2155C2C8859D5009E1766 /* MainView.swift in Sources */,
+				A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */,
+				A5D215542C8851C0009E1766 /* HapticManager.swift in Sources */,
 				A5D2152E2C882887009E1766 /* ContentView.swift in Sources */,
 				A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */,
+				A5D215472C884F4C009E1766 /* ColorExtension.swift in Sources */,
+				A5D2155A2C885997009E1766 /* CardListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +401,13 @@
 				DEVELOPMENT_TEAM = HH4G2BS7C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PYNMApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +415,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MGO1.PYNMApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,11 +436,13 @@
 				DEVELOPMENT_TEAM = HH4G2BS7C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PYNMApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +450,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MGO1.PYNMApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
