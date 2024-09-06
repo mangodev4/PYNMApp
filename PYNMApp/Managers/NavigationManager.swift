@@ -15,8 +15,14 @@ class NavigationManager: ObservableObject {
     }
     
     func goBack() {
-            path.removeLast()
+        DispatchQueue.main.async {
+            if self.path.count > 0 {
+                self.path.removeLast()
+            } else {
+                print("Navigation path is empty. Can't go back.")
+            }
         }
+    }
     
     func resetNavigation() {
         path.removeLast(path.count)

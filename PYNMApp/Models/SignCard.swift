@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Card: Identifiable {
+struct Card: Identifiable, Hashable {
     let id = UUID()
     var imageName: String
     var opacity: Double = 0.3

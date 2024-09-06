@@ -10,7 +10,7 @@ import SwiftUI
 struct CardDetailView: View {
     @ObservedObject var viewModel: CardListViewModel
     var card: Card
-    
+    @EnvironmentObject var navigationManager: NavigationManager
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
