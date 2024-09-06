@@ -1,6 +1,6 @@
 //
 //  TagButtonStyle.swift
-//  ManduApp
+//
 //
 //  Created by Yujin Son on 9/2/24.
 //

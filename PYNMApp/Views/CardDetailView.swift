@@ -50,6 +50,7 @@ struct CardDetailView: View {
                         presentationMode.wrappedValue.dismiss()
                         
                     }
+                    .buttonStyle(OnboardingButtonStyle())
                     .padding()
                 }
             }

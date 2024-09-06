@@ -35,6 +35,20 @@ struct MainView: View {
                 }
             }
             .navigationTitle("평양냉면")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack {
+                        Text("평양냉면 뿌시기")
+                            .font(.headline)
+                        //                    Image(systemName: "photo.fill")
+                        //                        .font(.title)
+                        //                        .foregroundColor(.brown)
+                        Text("뿌셔뿌셔")
+                            .font(.subheadline)
+                    }
+                }
+            }
             .navigationDestination(for: Card.self) { card in
                 CardDetailView(viewModel: viewModel, card: card)
                     .environmentObject(navigationManager)
