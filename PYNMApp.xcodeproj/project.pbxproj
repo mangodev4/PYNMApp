@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A501E68D2C89500E00544E2E /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E68C2C89500E00544E2E /* RoundedCorners.swift */; };
 		A501E68F2C89A78B00544E2E /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E68E2C89A78B00544E2E /* NavigationManager.swift */; };
+		A501E6912C8AF32900544E2E /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E6902C8AF32900544E2E /* ButtonStyle.swift */; };
+		A501E6932C8EC17D00544E2E /* PYNM_Header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A501E6922C8EC17D00544E2E /* PYNM_Header.jpg */; };
 		A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152B2C882887009E1766 /* PYNMAppApp.swift */; };
 		A5D2152E2C882887009E1766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152D2C882887009E1766 /* ContentView.swift */; };
 		A5D215302C882889009E1766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D2152F2C882889009E1766 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		A501E68C2C89500E00544E2E /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		A501E68E2C89A78B00544E2E /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		A501E6902C8AF32900544E2E /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		A501E6922C8EC17D00544E2E /* PYNM_Header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PYNM_Header.jpg; sourceTree = "<group>"; };
 		A5D215282C882887009E1766 /* PYNMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYNMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D2152B2C882887009E1766 /* PYNMAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PYNMAppApp.swift; sourceTree = "<group>"; };
 		A5D2152D2C882887009E1766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				A5D2153B2C884BC3009E1766 /* sign2.svg */,
 				A5D2153C2C884BC3009E1766 /* sign3.svg */,
 				A5D2153A2C884BC3009E1766 /* sign4.svg */,
+				A501E6922C8EC17D00544E2E /* PYNM_Header.jpg */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				A5D2152D2C882887009E1766 /* ContentView.swift */,
 				A5D2155B2C8859D5009E1766 /* MainView.swift */,
 				A5D2155D2C885A51009E1766 /* CardDetailView.swift */,
+				A501E6902C8AF32900544E2E /* ButtonStyle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5D2153E2C884BC3009E1766 /* sign4.svg in Resources */,
+				A501E6932C8EC17D00544E2E /* PYNM_Header.jpg in Resources */,
 				A5D215402C884BC3009E1766 /* sign3.svg in Resources */,
 				A5D2154D2C884FC1009E1766 /* Pretendard-Bold.otf in Resources */,
 				A5D2154E2C884FC1009E1766 /* Pretendard-Medium.otf in Resources */,
@@ -262,6 +269,7 @@
 				A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */,
 				A5D215542C8851C0009E1766 /* HapticManager.swift in Sources */,
 				A5D2152E2C882887009E1766 /* ContentView.swift in Sources */,
+				A501E6912C8AF32900544E2E /* ButtonStyle.swift in Sources */,
 				A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */,
 				A5D215472C884F4C009E1766 /* ColorExtension.swift in Sources */,
 				A5D2155A2C885997009E1766 /* CardListViewModel.swift in Sources */,
