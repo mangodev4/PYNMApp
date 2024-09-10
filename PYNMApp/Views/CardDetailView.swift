@@ -25,7 +25,6 @@ struct CardDetailView: View {
                     .edgesIgnoringSafeArea(.bottom)
                 
                 VStack {
-                    Spacer()
                     
                     Image(card.imageName)
                         .resizable()
@@ -33,13 +32,32 @@ struct CardDetailView: View {
                     //                        .frame(height: 300)
                         .padding()
                     
-                    Text(card.imageName)
-                        .font(.largeTitle)
+                    HStack {
+                        
+                        Text("가게 이름")
+                            .font(.pretendBold18)
+                        
+                        Spacer()
+                        
+                        Text(card.imageName)
+                            .font(.pretendBold18)
+                    }
                     
-                    Spacer()
+                    Divider()
                     
-                    Text("000-0000-0000")
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    HStack {
+                        
+                        Text("전화 번호")
+                            .font(.pretendBold18)
+                        
+                        Spacer()
+                        
+                        Text("000-0000-0000")
+                            .font(.pretendBold18)
+                    }
+
+
+                    Divider()
                     
                     Spacer()
                     
@@ -53,6 +71,8 @@ struct CardDetailView: View {
                     .buttonStyle(OnboardingButtonStyle())
                     .padding()
                 }
+                .padding(.horizontal, 30)
+
             }
             .frame(maxHeight: .infinity)
         }
