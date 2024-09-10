@@ -10,22 +10,34 @@ import SwiftUI
 struct MainView: View {
     @ObservedObject var viewModel = CardListViewModel()
     @StateObject var navigationManager = NavigationManager()
+    @State private var offsetY: CGFloat = CGFloat.zero
     
     var body: some View {
         NavigationStack(path: $navigationManager.path) {
             ScrollView {
-                ZStack {
-//                    Image(systemName: "photo.fill")
-//                        .font(.title)
-//                        .foregroundColor(.brown)
-                    Image("PYNM_Header")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill )
-                        .clipped()
-                    Text("평양냉면 헤더 예시입니다")
-                        .font(.title)
-                        .foregroundStyle(.white)
+                GeometryReader { geometry in
+                    let offset = geometry.frame(in: .global).minY
+                    setOffset(offset: offset)
+                    ZStack {
+                        //                    Image(systemName: "photo.fill")
+                        //                        .font(.title)
+                        //                        .foregroundColor(.brown)
+                        Image("PYNM_Header")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill )
+                            .clipped()
+                        Text("평양냉면 헤더 예시입니다")
+                            .font(.title)
+                            .foregroundStyle(.white)
+                    }
+                    .frame(
+                        width: geometry.size.width,
+                        height: 250 + (offset > 0 ? offset : 0)
+                    )
+                    .offset(y: (offset > 0 ? -offset : 0))
                 }
+                .frame(minHeight: 250)
+                
                 LazyVStack(pinnedViews:[.sectionHeaders]) {
                     Section(header: Header()) {
                         ForEach(viewModel.cards) { card in
@@ -39,8 +51,9 @@ struct MainView: View {
                                         .cornerRadius(8)
                                         .opacity(card.opacity)
                                 }
+                                Text(card.imageName)
                             }
-                            .frame(maxWidth: .infinity)
+                            .frame(maxWidth: .infinity, maxHeight: 150)
                             .padding(.vertical, 3)
                             .padding(.horizontal, 5)
                             
@@ -48,7 +61,15 @@ struct MainView: View {
                     }
                 }
             }
-            .clipped()
+//            .clipped()
+            .overlay(
+                Rectangle()
+                    .foregroundColor(.white)
+                    .frame(height: UIApplication.shared.windows.first?.safeAreaInsets.top)
+                    .edgesIgnoringSafeArea(.all)
+                    .opacity(offsetY > -250 ? 0 : 1)
+                , alignment: .top
+            )
 //            .navigationTitle("평양냉면")
 //            .navigationBarTitleDisplayMode(.inline)
 //            .toolbar {
@@ -71,6 +92,12 @@ struct MainView: View {
             }
         }
         .environmentObject(navigationManager)
+    }
+    func setOffset(offset: CGFloat) -> some View {
+        DispatchQueue.main.async {
+            self.offsetY = offset
+        }
+        return EmptyView()
     }
 }
 
