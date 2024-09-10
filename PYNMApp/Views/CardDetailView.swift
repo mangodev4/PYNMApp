@@ -59,6 +59,29 @@ struct CardDetailView: View {
 
                     Divider()
                     
+                    HStack {
+                        
+                        Text("위치")
+                            .font(.pretendBold18)
+                        
+                        Spacer()
+                        
+                        let address = "서울특별시 중구 창경궁로 62-29"
+                        
+                        Text(address)
+                            .font(.pretendBold18)
+                        
+                        Button {
+                            UIPasteboard.general.string = address
+                        } label: {
+                            Image(systemName: "doc.on.doc")
+                        }
+
+                    }
+
+
+                    Divider()
+                    
                     Spacer()
                     
                     Button("Save") {
