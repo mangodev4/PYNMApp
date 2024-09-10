@@ -19,9 +19,6 @@ struct MainView: View {
                     let offset = geometry.frame(in: .global).minY
                     setOffset(offset: offset)
                     ZStack {
-                        //                    Image(systemName: "photo.fill")
-                        //                        .font(.title)
-                        //                        .foregroundColor(.brown)
                         Image("PYNM_Header")
                             .resizable()
                             .aspectRatio(contentMode: .fill )
@@ -56,12 +53,11 @@ struct MainView: View {
                             .frame(maxWidth: .infinity, maxHeight: 150)
                             .padding(.vertical, 3)
                             .padding(.horizontal, 5)
-                            
                         }
                     }
                 }
             }
-//            .clipped()
+            //            .clipped()
             .overlay(
                 Rectangle()
                     .foregroundColor(.white)
@@ -70,22 +66,6 @@ struct MainView: View {
                     .opacity(offsetY > -250 ? 0 : 1)
                 , alignment: .top
             )
-//            .navigationTitle("평양냉면")
-//            .navigationBarTitleDisplayMode(.inline)
-//            .toolbar {
-//                ToolbarItem(placement: .principal) {
-//                    VStack {
-//                        Text("평양냉면 뿌시기")
-//                            .font(.headline)
-//                        Image(systemName: "photo.fill")
-//                            .font(.title)
-//                            .foregroundColor(.brown)
-//                            .padding()
-//                        Text("뿌셔뿌셔")
-//                            .font(.subheadline)
-//                    }
-//                }
-//            }
             .navigationDestination(for: Card.self) { card in
                 CardDetailView(viewModel: viewModel, card: card)
                     .environmentObject(navigationManager)
@@ -101,6 +81,8 @@ struct MainView: View {
     }
 }
 
+
+// MARK: Sticky Header
 struct Header: View {
     var body: some View {
         VStack {
