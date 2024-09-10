@@ -13,6 +13,8 @@ struct CardDetailView: View {
     @EnvironmentObject var navigationManager: NavigationManager
     @Environment(\.presentationMode) var presentationMode
     
+    @State private var isOn = false
+    
     var body: some View {
         ZStack {
             Color(.black)
@@ -25,13 +27,23 @@ struct CardDetailView: View {
                     .edgesIgnoringSafeArea(.bottom)
                 
                 VStack {
-                    
-                    Image(card.imageName)
-                        .resizable()
-                        .scaledToFit()
-                    //                        .frame(height: 300)
-                        .padding()
-                    
+                    ZStack {
+                        Image(card.imageName)
+                            .resizable()
+                            .scaledToFit()
+                        //                        .frame(height: 300)
+                            .padding()
+                        
+                        Button(action: {
+                            withAnimation {
+                                isOn.toggle()
+                            }
+                        }) {
+                            Image(systemName: isOn ? "suit.heart.fill" : "suit.heart")
+                                .font(.largeTitle)
+                                .foregroundColor(isOn ? Color.red : Color.white)
+                        }
+                    }
                     HStack {
                         
                         Text("가게 이름")
