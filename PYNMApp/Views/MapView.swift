@@ -9,10 +9,25 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    
+    let garage = CLLocationCoordinate2D(latitude: 40.83657722488077, longitude: 14.306896671048852)
+    
+        var body: some View {
+            Map {
+                Annotation("Garage", coordinate: garage) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 5)
+                            .fill(.background)
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(.secondary, lineWidth: 5)
+                        Image(systemName: "car")
+                            .padding(8)
+                    }
+                }
+            }
+//            .mapControlVisibility(.hidden)
+        }
     }
-}
 
 #Preview {
     MapView()
