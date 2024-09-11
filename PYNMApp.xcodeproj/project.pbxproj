@@ -11,6 +11,8 @@
 		A501E68F2C89A78B00544E2E /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E68E2C89A78B00544E2E /* NavigationManager.swift */; };
 		A501E6912C8AF32900544E2E /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E6902C8AF32900544E2E /* ButtonStyle.swift */; };
 		A501E6932C8EC17D00544E2E /* PYNM_Header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A501E6922C8EC17D00544E2E /* PYNM_Header.jpg */; };
+		A584593A2C9047EF00340D9C /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58459392C9047EF00340D9C /* CardDetailViewModel.swift */; };
+		A584593C2C9149F900340D9C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584593B2C9149F900340D9C /* MapView.swift */; };
 		A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152B2C882887009E1766 /* PYNMAppApp.swift */; };
 		A5D2152E2C882887009E1766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152D2C882887009E1766 /* ContentView.swift */; };
 		A5D215302C882889009E1766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D2152F2C882889009E1766 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		A501E68E2C89A78B00544E2E /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		A501E6902C8AF32900544E2E /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		A501E6922C8EC17D00544E2E /* PYNM_Header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PYNM_Header.jpg; sourceTree = "<group>"; };
+		A58459392C9047EF00340D9C /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
+		A584593B2C9149F900340D9C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A5D215282C882887009E1766 /* PYNMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYNMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D2152B2C882887009E1766 /* PYNMAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PYNMAppApp.swift; sourceTree = "<group>"; };
 		A5D2152D2C882887009E1766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				A5D2155B2C8859D5009E1766 /* MainView.swift */,
 				A5D2155D2C885A51009E1766 /* CardDetailView.swift */,
 				A501E6902C8AF32900544E2E /* ButtonStyle.swift */,
+				A584593B2C9149F900340D9C /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			children = (
 				A5D215572C8858C4009E1766 /* SignCard.swift */,
 				A5D215592C885997009E1766 /* CardListViewModel.swift */,
+				A58459392C9047EF00340D9C /* CardDetailViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +274,8 @@
 				A5D2155C2C8859D5009E1766 /* MainView.swift in Sources */,
 				A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */,
 				A5D215542C8851C0009E1766 /* HapticManager.swift in Sources */,
+				A584593C2C9149F900340D9C /* MapView.swift in Sources */,
+				A584593A2C9047EF00340D9C /* CardDetailViewModel.swift in Sources */,
 				A5D2152E2C882887009E1766 /* ContentView.swift in Sources */,
 				A501E6912C8AF32900544E2E /* ButtonStyle.swift in Sources */,
 				A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */,
