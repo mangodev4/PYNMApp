@@ -15,6 +15,8 @@ struct CardDetailView: View {
     
     @State private var isOn = false
     
+//    @ObservedObject var viewModel: CardDetailViewModel
+
     var body: some View {
         ZStack {
             Color(.black)
@@ -33,6 +35,8 @@ struct CardDetailView: View {
                             .scaledToFit()
                         //                        .frame(height: 300)
                             .padding()
+                        
+                        
                         
                         Button(action: {
                             withAnimation {
