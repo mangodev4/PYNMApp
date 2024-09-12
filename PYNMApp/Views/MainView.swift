@@ -11,7 +11,6 @@ struct MainView: View {
     var body: some View {
         ZStack {
             MapView()
-            
             NMListView()
         }
     }

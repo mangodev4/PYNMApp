@@ -14,8 +14,8 @@ struct NMListView: View {
     var body: some View {
         NavigationStack(path: $navigationManager.path) {
             ScrollView {
-                LazyVStack(pinnedViews:[.sectionHeaders]) {
-                    Section(header: Header()) {
+                LazyVStack {
+//                    Section(header: Header()) {
                         ForEach(viewModel.cards) { card in
                             ZStack {
                                 Button(action: {
@@ -32,43 +32,33 @@ struct NMListView: View {
                             .frame(maxWidth: .infinity, maxHeight: 150)
                             .padding(.vertical, 3)
                             .padding(.horizontal, 5)
+                            .background(Color.clear)
                         }
-                    }
                 }
+//                .background(Color.clear)
             }
-            .background(Color.clear)
-            .overlay(
-                Rectangle()
-                    .foregroundColor(.white)
-                    .frame(height: UIApplication.shared.windows.first?.safeAreaInsets.top)
-                    .edgesIgnoringSafeArea(.all)
-                , alignment: .top
-            )
-            .edgesIgnoringSafeArea(.bottom)
+//            .background(Color.clear)
+//            .edgesIgnoringSafeArea(.bottom)
             .navigationDestination(for: Card.self) { card in
                 CardDetailView(viewModel: viewModel, card: card)
                     .environmentObject(navigationManager)
             }
         }        
         .environmentObject(navigationManager)
+        .background(Color.clear)
     }
 
-    // MARK: Sticky Header
-    struct Header: View {
-        var body: some View {
-            VStack {
-                Spacer()
-                Text("평양 냉면")
-                    .fontWeight(.bold)
-                Text("서울 맛집 20선")
-                Spacer()
-                Divider()
-            }
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .frame(height: 50)
-            .background(Rectangle().foregroundColor(.white))
-        }
+
+}
+
+struct TransparentListContainer: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIView {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
     }
+
+    func updateUIView(_ uiView: UIView, context: Context) {}
 }
 
 

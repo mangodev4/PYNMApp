@@ -58,17 +58,50 @@ struct MapView: View {
                 viewModel.loadPlaces()
             }
             .edgesIgnoringSafeArea(.all)
-        }
-        
-        Button {
-            withAnimation {
-                currentIndex = (currentIndex + 1) % viewModel.places.count
-                region.center = viewModel.places[currentIndex].coordinate
-                region.span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+            
+            VStack {
+                Header()
+                    .frame(height: 50)
+                
+                Spacer()
+                
+                Button {
+                    withAnimation {
+                        currentIndex = (currentIndex + 1) % viewModel.places.count
+                        region.center = viewModel.places[currentIndex].coordinate
+                        region.span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+                    }
+                } label: {
+                    Text("Teleport")
+                }
+                .buttonStyle(OnboardingButtonStyle())
             }
-        } label: {
-            Text("Teleport")
+            .overlay(
+                Rectangle()
+                    .foregroundColor(.white)
+                    .frame(height: UIApplication.shared.windows.first?.safeAreaInsets.top)
+                    .edgesIgnoringSafeArea(.all)
+                , alignment: .top
+            )
         }
-        .buttonStyle(OnboardingButtonStyle())
     }
+    
+    // MARK: Sticky Header
+    struct Header: View {
+        var body: some View {
+            VStack {
+                Spacer()
+                Text("평양 냉면")
+                    .fontWeight(.bold)
+                Text("서울 맛집 20선")
+                Spacer()
+                Divider()
+            }
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .frame(height: 50)
+            .background(Rectangle().foregroundColor(.white))
+        }
+    }
+    
 }
+
