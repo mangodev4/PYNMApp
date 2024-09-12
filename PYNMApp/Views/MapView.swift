@@ -74,6 +74,7 @@ struct MapView: View {
                 } label: {
                     Text("Teleport")
                 }
+                .frame(width: 350)
                 .buttonStyle(OnboardingButtonStyle())
             }
             .overlay(
