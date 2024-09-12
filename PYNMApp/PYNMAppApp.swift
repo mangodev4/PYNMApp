@@ -12,7 +12,7 @@ struct PYNMAppApp: App {
     var body: some Scene {
         WindowGroup {
             MapView()
-//            MainView()
+//            NMListView()
         }
     }
 }

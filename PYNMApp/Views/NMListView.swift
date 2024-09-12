@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  NMListView.swift
 //  PYNMApp
 //
 //  Created by Yujin Son on 9/4/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct NMListView: View {
     @ObservedObject var viewModel = CardListViewModel()
     @StateObject var navigationManager = NavigationManager()
     @State private var offsetY: CGFloat = CGFloat.zero

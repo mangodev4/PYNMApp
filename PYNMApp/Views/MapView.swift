@@ -72,7 +72,3 @@ struct MapView: View {
         .buttonStyle(OnboardingButtonStyle())
     }
 }
-
-#Preview {
-    MapView()
-}

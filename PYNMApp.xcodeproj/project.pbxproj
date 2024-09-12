@@ -32,7 +32,7 @@
 		A5D215542C8851C0009E1766 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215532C8851C0009E1766 /* HapticManager.swift */; };
 		A5D215582C8858C4009E1766 /* SignCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215572C8858C4009E1766 /* SignCard.swift */; };
 		A5D2155A2C885997009E1766 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D215592C885997009E1766 /* CardListViewModel.swift */; };
-		A5D2155C2C8859D5009E1766 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2155B2C8859D5009E1766 /* MainView.swift */; };
+		A5D2155C2C8859D5009E1766 /* NMListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2155B2C8859D5009E1766 /* NMListView.swift */; };
 		A5D2155E2C885A51009E1766 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2155D2C885A51009E1766 /* CardDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +64,7 @@
 		A5D215532C8851C0009E1766 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		A5D215572C8858C4009E1766 /* SignCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignCard.swift; sourceTree = "<group>"; };
 		A5D215592C885997009E1766 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
-		A5D2155B2C8859D5009E1766 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A5D2155B2C8859D5009E1766 /* NMListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMListView.swift; sourceTree = "<group>"; };
 		A5D2155D2C885A51009E1766 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				A5D2152D2C882887009E1766 /* ContentView.swift */,
-				A5D2155B2C8859D5009E1766 /* MainView.swift */,
+				A5D2155B2C8859D5009E1766 /* NMListView.swift */,
 				A5D2155D2C885A51009E1766 /* CardDetailView.swift */,
 				A501E6902C8AF32900544E2E /* ButtonStyle.swift */,
 				A584593B2C9149F900340D9C /* MapView.swift */,
@@ -278,7 +278,7 @@
 				A5D2155E2C885A51009E1766 /* CardDetailView.swift in Sources */,
 				A584593E2C91626B00340D9C /* NMPlace.swift in Sources */,
 				A5D215582C8858C4009E1766 /* SignCard.swift in Sources */,
-				A5D2155C2C8859D5009E1766 /* MainView.swift in Sources */,
+				A5D2155C2C8859D5009E1766 /* NMListView.swift in Sources */,
 				A5D215452C884CC3009E1766 /* FontExtension.swift in Sources */,
 				A58459402C91737600340D9C /* MapViewModel.swift in Sources */,
 				A5D215542C8851C0009E1766 /* HapticManager.swift in Sources */,
