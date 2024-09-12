@@ -15,17 +15,29 @@ struct MapView: View {
     @State private var currentIndex = 0
     
     init() {
-        _region = State(initialValue: MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 37.503774633134, longitude: 127.048192060882),
-            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        ))
+        _region = State(
+            initialValue: MKCoordinateRegion(
+                center: CLLocationCoordinate2D(
+                    latitude: 37.503774633134,
+                    longitude: 127.048192060882
+                ),
+                span: MKCoordinateSpan(
+                    latitudeDelta: 0.01,
+                    longitudeDelta: 0.01
+                )
+            )
+        )
     }
-    
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $region, annotationItems: viewModel.places) { place in
-                MapAnnotation(coordinate: place.coordinate) {
+            Map(
+                coordinateRegion: $region,
+                annotationItems: viewModel.places
+            ) { place in
+                MapAnnotation(
+                    coordinate: place.coordinate
+                ) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 5)
                             .fill(Color.white.opacity(0.8))
@@ -39,7 +51,6 @@ struct MapView: View {
                                 .font(.caption)
                                 .padding(5)
                         }
-                        
                     }
                 }
             }

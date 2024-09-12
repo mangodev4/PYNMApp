@@ -11,7 +11,8 @@ import SwiftUI
 struct PYNMAppApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MapView()
+//            MainView()
         }
     }
 }
