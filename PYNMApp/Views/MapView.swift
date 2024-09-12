@@ -61,7 +61,7 @@ struct MapView: View {
             
             VStack {
                 Header()
-                    .frame(height: 50)
+                    .frame(height: 60)
                 
                 Spacer()
                 
@@ -91,14 +91,14 @@ struct MapView: View {
         var body: some View {
             VStack {
                 Spacer()
-                Text("평양 냉면")
-                    .fontWeight(.bold)
-                Text("서울 맛집 20선")
+                Image(systemName: "photo.fill")
+                    .font(.largeTitle)
+//                Text("서울 맛집 20선")
                 Spacer()
                 Divider()
             }
             .frame(minWidth: 0, maxWidth: .infinity)
-            .frame(height: 50)
+            .frame(height: 60)
             .background(Rectangle().foregroundColor(.white))
         }
     }
