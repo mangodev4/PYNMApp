@@ -36,7 +36,7 @@ struct NMListView: View {
                     }
                 }
             }
-            .background(Color.red)
+            .background(Color.clear)
             .overlay(
                 Rectangle()
                     .foregroundColor(.white)
