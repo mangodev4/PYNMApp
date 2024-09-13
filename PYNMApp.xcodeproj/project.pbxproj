@@ -18,6 +18,7 @@
 		A58459422C92B08500340D9C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58459412C92B08500340D9C /* MainView.swift */; };
 		A58459452C92B9C100340D9C /* NMListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58459442C92B9C000340D9C /* NMListView.swift */; };
 		A58459482C93F9D700340D9C /* NMPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58459472C93F9D700340D9C /* NMPlaces.swift */; };
+		A584594A2C9416F700340D9C /* TransparentBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58459492C9416F700340D9C /* TransparentBackgroundView.swift */; };
 		A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152B2C882887009E1766 /* PYNMAppApp.swift */; };
 		A5D2152E2C882887009E1766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152D2C882887009E1766 /* ContentView.swift */; };
 		A5D215302C882889009E1766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D2152F2C882889009E1766 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		A58459412C92B08500340D9C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A58459442C92B9C000340D9C /* NMListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMListView.swift; sourceTree = "<group>"; };
 		A58459472C93F9D700340D9C /* NMPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMPlaces.swift; sourceTree = "<group>"; };
+		A58459492C9416F700340D9C /* TransparentBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentBackgroundView.swift; sourceTree = "<group>"; };
 		A5D215282C882887009E1766 /* PYNMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYNMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D2152B2C882887009E1766 /* PYNMAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PYNMAppApp.swift; sourceTree = "<group>"; };
 		A5D2152D2C882887009E1766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				A5D215442C884CC3009E1766 /* FontExtension.swift */,
 				A5D215462C884F4C009E1766 /* ColorExtension.swift */,
+				A58459492C9416F700340D9C /* TransparentBackgroundView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				A5D215542C8851C0009E1766 /* HapticManager.swift in Sources */,
 				A584593C2C9149F900340D9C /* MapView.swift in Sources */,
 				A58459482C93F9D700340D9C /* NMPlaces.swift in Sources */,
+				A584594A2C9416F700340D9C /* TransparentBackgroundView.swift in Sources */,
 				A584593A2C9047EF00340D9C /* CardDetailViewModel.swift in Sources */,
 				A58459422C92B08500340D9C /* MainView.swift in Sources */,
 				A5D2152E2C882887009E1766 /* ContentView.swift in Sources */,
