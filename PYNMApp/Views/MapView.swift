@@ -11,6 +11,7 @@ import MapKit
 struct MapView: View {
     
     @StateObject private var viewModel = MapViewModel()
+    @State private var isShowSheet = true
 //    @State private var region: MKCoordinateRegion
 //    @State private var currentIndex = 0
     
@@ -65,15 +66,6 @@ struct MapView: View {
                 
                 Spacer()
                 
-                Button {
-                    withAnimation {
-                        viewModel.movePlace()
-                    }
-                } label: {
-                    Text("Teleport")
-                }
-                .frame(width: 350)
-                .buttonStyle(OnboardingButtonStyle())
             }
             .overlay(
                 Rectangle()
@@ -82,6 +74,10 @@ struct MapView: View {
                     .edgesIgnoringSafeArea(.all)
                 , alignment: .top
             )
+        }
+        .sheet(isPresented: $isShowSheet) {
+            TeleportSheet(viewModel: viewModel)
+                .presentationDetents([.fraction(0.2)])
         }
     }
     
@@ -102,5 +98,19 @@ struct MapView: View {
         }
     }
     
+    struct TeleportSheet: View {
+        @ObservedObject var viewModel: MapViewModel
+        var body: some View {
+            Button {
+                withAnimation {
+                    viewModel.movePlace()
+                }
+            } label: {
+                Text("Teleport")
+            }
+            .frame(width: 350)
+            .buttonStyle(OnboardingButtonStyle())
+        }
+    }
 }
 

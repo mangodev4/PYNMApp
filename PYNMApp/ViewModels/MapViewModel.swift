@@ -24,7 +24,9 @@ class MapViewModel: ObservableObject {
         
         
         func loadPlaces() {
-            places = sampleNMPlaces
+            DispatchQueue.main.async {
+                self.places = sampleNMPlaces
+            }
         }
         
         func movePlace() {
