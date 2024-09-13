@@ -91,6 +91,16 @@
 			path = Deprecated;
 			sourceTree = "<group>";
 		};
+		A58459462C93F99200340D9C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A58459392C9047EF00340D9C /* CardDetailViewModel.swift */,
+				A584593F2C91737600340D9C /* MapViewModel.swift */,
+				A5D215592C885997009E1766 /* CardListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		A5D2151F2C882887009E1766 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		A5D2152A2C882887009E1766 /* PYNMApp */ = {
 			isa = PBXGroup;
 			children = (
+				A58459462C93F99200340D9C /* ViewModels */,
 				A58459432C92B98300340D9C /* Deprecated */,
 				A5D215562C885846009E1766 /* Models */,
 				A5D215552C88520D009E1766 /* Views */,
@@ -200,10 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				A5D215572C8858C4009E1766 /* SignCard.swift */,
-				A5D215592C885997009E1766 /* CardListViewModel.swift */,
-				A58459392C9047EF00340D9C /* CardDetailViewModel.swift */,
 				A584593D2C91626B00340D9C /* NMPlace.swift */,
-				A584593F2C91737600340D9C /* MapViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
