@@ -12,23 +12,6 @@ struct MapView: View {
     
     @StateObject private var viewModel = MapViewModel()
     @State private var isShowSheet = true
-//    @State private var region: MKCoordinateRegion
-//    @State private var currentIndex = 0
-    
-//    init() {
-//        _region = State(
-//            initialValue: MKCoordinateRegion(
-//                center: CLLocationCoordinate2D(
-//                    latitude: 37.503774633134,
-//                    longitude: 127.048192060882
-//                ),
-//                span: MKCoordinateSpan(
-//                    latitudeDelta: 0.01,
-//                    longitudeDelta: 0.01
-//                )
-//            )
-//        )
-//    }
     
     var body: some View {
         ZStack {
@@ -77,7 +60,8 @@ struct MapView: View {
         }
         .sheet(isPresented: $isShowSheet) {
             TeleportSheet(viewModel: viewModel)
-                .presentationDetents([.fraction(0.2)])
+                .presentationDetents([.fraction(0.3)])
+                .presentationBackground(.clear)
         }
     }
     
@@ -88,7 +72,6 @@ struct MapView: View {
                 Spacer()
                 Image(systemName: "photo.fill")
                     .font(.largeTitle)
-//                Text("서울 맛집 20선")
                 Spacer()
                 Divider()
             }
@@ -101,15 +84,15 @@ struct MapView: View {
     struct TeleportSheet: View {
         @ObservedObject var viewModel: MapViewModel
         var body: some View {
-            Button {
-                withAnimation {
-                    viewModel.movePlace()
+                Button {
+                    withAnimation {
+                        viewModel.movePlace()
+                    }
+                } label: {
+                    Text("Teleport")
                 }
-            } label: {
-                Text("Teleport")
-            }
-            .frame(width: 350)
-            .buttonStyle(OnboardingButtonStyle())
+                .frame(width: 350)
+                .buttonStyle(OnboardingButtonStyle())
         }
     }
 }
