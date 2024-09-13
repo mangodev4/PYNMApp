@@ -59,9 +59,13 @@ struct MapView: View {
             )
         }
         .sheet(isPresented: $isShowSheet) {
-            TeleportSheet(viewModel: viewModel)
-                .presentationDetents([.fraction(0.3)])
+            ModalSheetView(viewModel: viewModel)
+                .presentationDetents(
+                    [.height(200), .height(700)])
                 .presentationBackground(.clear)
+                .presentationBackgroundInteraction(
+                    .enabled(upThrough: .height(700)))
+                .presentationDragIndicator(.hidden)
         }
     }
     
@@ -81,19 +85,6 @@ struct MapView: View {
         }
     }
     
-    struct TeleportSheet: View {
-        @ObservedObject var viewModel: MapViewModel
-        var body: some View {
-                Button {
-                    withAnimation {
-                        viewModel.movePlace()
-                    }
-                } label: {
-                    Text("Teleport")
-                }
-                .frame(width: 350)
-                .buttonStyle(OnboardingButtonStyle())
-        }
-    }
+
 }
 
