@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 class CardListViewModel: ObservableObject {
+    
     @Published var cards: [Card] {
         didSet {
             saveCards()

@@ -11,7 +11,7 @@ import MapKit
 struct MapView: View {
     
     @StateObject private var viewModel = MapViewModel()
-    @State private var isShowSheet = true
+    @State private var isShowModal = true
     
     var body: some View {
         ZStack {
@@ -58,14 +58,15 @@ struct MapView: View {
                 , alignment: .top
             )
         }
-        .sheet(isPresented: $isShowSheet) {
-            ModalSheetView(viewModel: viewModel)
+        .sheet(isPresented: $isShowModal) {
+            NMListView(viewModel: CardListViewModel(),navigationManager: NavigationManager())
                 .presentationDetents(
-                    [.height(200), .height(700)])
+                    [.height(180), .height(700)])
                 .presentationBackground(.clear)
                 .presentationBackgroundInteraction(
                     .enabled(upThrough: .height(700)))
                 .presentationDragIndicator(.hidden)
+                .interactiveDismissDisabled(true)
         }
     }
     

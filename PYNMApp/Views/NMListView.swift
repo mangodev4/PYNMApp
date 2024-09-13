@@ -15,52 +15,34 @@ struct NMListView: View {
         NavigationStack(path: $navigationManager.path) {
             ScrollView {
                 LazyVStack {
-//                    Section(header: Header()) {
-                        ForEach(viewModel.cards) { card in
-                            ZStack {
-                                Button(action: {
-                                    navigationManager.navigateToCardDetail(card: card)
-                                }) {
-                                    Image(card.imageName)
-                                        .resizable()
-                                        .scaledToFill()
-                                        .cornerRadius(8)
-                                        .opacity(card.opacity)
-                                }
-                                Text(card.imageName)
+                    ForEach(viewModel.cards) { card in
+                        ZStack {
+                            Button(action: {
+                                navigationManager.navigateToCardDetail(card: card)
+                            }) {
+                                Image(card.imageName)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .cornerRadius(8)
+                                    .opacity(card.opacity)
                             }
-                            .frame(maxWidth: .infinity, maxHeight: 150)
-                            .padding(.vertical, 3)
-                            .padding(.horizontal, 5)
-                            .background(Color.clear)
+                            Text(card.imageName)
                         }
+                        .frame(maxWidth: .infinity, maxHeight: 150)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 5)
+                        .background(Color.clear)
+                    }
                 }
-//                .background(Color.clear)
             }
-//            .background(Color.clear)
-//            .edgesIgnoringSafeArea(.bottom)
             .navigationDestination(for: Card.self) { card in
                 CardDetailView(viewModel: viewModel, card: card)
                     .environmentObject(navigationManager)
             }
-        }        
+        }
         .environmentObject(navigationManager)
-        .background(Color.clear)
     }
-
-
 }
-
-struct TransparentListContainer: UIViewRepresentable {
-    func makeUIView(context: Context) -> UIView {
-        let view = UIView()
-        view.backgroundColor = .clear
-        return view
-    }
-
-    func updateUIView(_ uiView: UIView, context: Context) {}
-}
-
 
 
 #Preview {
