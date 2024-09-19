@@ -12,7 +12,9 @@ struct MapView: View {
     
     @StateObject private var viewModel = MapViewModel()
     @State private var isShowModal = true
-    @State private var modalHeight: PresentationDetent = .height(170)
+//    @State private var modalHeight: PresentationDetent = .height(170)
+    @StateObject private var bottomSheetManager = BottomSheetHeightManager()
+
     
     var body: some View {
         ZStack {
@@ -49,7 +51,7 @@ struct MapView: View {
                     .frame(height: 60)
                 
                 Button {
-                    toggleModalHeight()
+                    bottomSheetManager.toggleHeight()
                 } label: {
                     Text("View List")
                 }
@@ -69,7 +71,7 @@ struct MapView: View {
         }
         .sheet(isPresented: $isShowModal) {
             NMListView(viewModel: CardListViewModel(),navigationManager: NavigationManager())
-                .presentationDetents([.height(170), .height(650)], selection: $modalHeight)
+                .presentationDetents([.height(170), .height(650)], selection: $bottomSheetManager.currentHeight)
                 .presentationBackground(.clear)
                 .presentationBackgroundInteraction(
                     .enabled(upThrough: .height(650)))
@@ -78,11 +80,6 @@ struct MapView: View {
         }
     }
     
-    private func toggleModalHeight() {
-        withAnimation {
-            modalHeight = modalHeight == .height(170) ? .height(650) : .height(170)
-        }
-    }
     
     // MARK: Sticky Header
     struct Header: View {

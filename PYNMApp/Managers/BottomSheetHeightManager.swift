@@ -8,12 +8,29 @@
 import Foundation
 import SwiftUI
 
-class BottomSheetHeightManager: ObservableObject {
-    @Published var currentHeight: PresentationDetent = .height(170)
+enum BottomSheetState {
+    case collapsed
+    case expanded
+    case custom(height: CGFloat)
     
-    func toggleHeight() {
+    var presentationDetent: PresentationDetent {
+        switch self {
+        case .collapsed:
+            return .height(170)
+        case .expanded:
+            return .height(650)
+        case .custom(let height):
+            return .height(height)
+        }
+    }
+}
+
+class BottomSheetHeightManager: ObservableObject {
+    @Published var currentHeight: BottomSheetState = .collapsed
+    
+    func changeHeight(to state: BottomSheetState) {
         withAnimation {
-            currentHeight = (currentHeight == .height(170)) ? .height(650) : .height(170)
+            currentHeight = state
         }
     }
 }
