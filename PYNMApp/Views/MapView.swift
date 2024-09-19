@@ -12,6 +12,7 @@ struct MapView: View {
     
     @StateObject private var viewModel = MapViewModel()
     @State private var isShowModal = true
+    @State private var modalHeight: PresentationDetent = .height(170)
     
     var body: some View {
         ZStack {
@@ -47,6 +48,14 @@ struct MapView: View {
                 Header()
                     .frame(height: 60)
                 
+                Button {
+                    toggleModalHeight()
+                } label: {
+                    Text("View List")
+                }
+                .frame(width: 100)
+                .buttonStyle(OnboardingButtonStyle())
+                
                 Spacer()
                 
             }
@@ -60,13 +69,18 @@ struct MapView: View {
         }
         .sheet(isPresented: $isShowModal) {
             NMListView(viewModel: CardListViewModel(),navigationManager: NavigationManager())
-                .presentationDetents(
-                    [.height(180), .height(700)])
+                .presentationDetents([.height(170), .height(650)], selection: $modalHeight)
                 .presentationBackground(.clear)
                 .presentationBackgroundInteraction(
-                    .enabled(upThrough: .height(700)))
+                    .enabled(upThrough: .height(650)))
                 .presentationDragIndicator(.hidden)
                 .interactiveDismissDisabled(true)
+        }
+    }
+    
+    private func toggleModalHeight() {
+        withAnimation {
+            modalHeight = modalHeight == .height(170) ? .height(650) : .height(170)
         }
     }
     
@@ -85,7 +99,5 @@ struct MapView: View {
             .background(Rectangle().foregroundColor(.white))
         }
     }
-    
-
 }
 

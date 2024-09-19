@@ -11,6 +11,7 @@
 		A501E68F2C89A78B00544E2E /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E68E2C89A78B00544E2E /* NavigationManager.swift */; };
 		A501E6912C8AF32900544E2E /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A501E6902C8AF32900544E2E /* ButtonStyle.swift */; };
 		A501E6932C8EC17D00544E2E /* PYNM_Header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A501E6922C8EC17D00544E2E /* PYNM_Header.jpg */; };
+		A530B0152C9BB945009F67B3 /* BottomSheetHeightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530B0142C9BB945009F67B3 /* BottomSheetHeightManager.swift */; };
 		A584593A2C9047EF00340D9C /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58459392C9047EF00340D9C /* CardDetailViewModel.swift */; };
 		A584593C2C9149F900340D9C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584593B2C9149F900340D9C /* MapView.swift */; };
 		A584593E2C91626B00340D9C /* NMPlaceDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584593D2C91626B00340D9C /* NMPlaceDeprecated.swift */; };
@@ -46,6 +47,7 @@
 		A501E68E2C89A78B00544E2E /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		A501E6902C8AF32900544E2E /* ButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		A501E6922C8EC17D00544E2E /* PYNM_Header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PYNM_Header.jpg; sourceTree = "<group>"; };
+		A530B0142C9BB945009F67B3 /* BottomSheetHeightManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetHeightManager.swift; sourceTree = "<group>"; };
 		A58459392C9047EF00340D9C /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
 		A584593B2C9149F900340D9C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A584593D2C91626B00340D9C /* NMPlaceDeprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMPlaceDeprecated.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				A5D215532C8851C0009E1766 /* HapticManager.swift */,
 				A501E68E2C89A78B00544E2E /* NavigationManager.swift */,
+				A530B0142C9BB945009F67B3 /* BottomSheetHeightManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A501E68F2C89A78B00544E2E /* NavigationManager.swift in Sources */,
+				A530B0152C9BB945009F67B3 /* BottomSheetHeightManager.swift in Sources */,
 				A501E68D2C89500E00544E2E /* RoundedCorners.swift in Sources */,
 				A5D2155E2C885A51009E1766 /* CardDetailView.swift in Sources */,
 				A584593E2C91626B00340D9C /* NMPlaceDeprecated.swift in Sources */,
