@@ -12,7 +12,8 @@ import MapKit
 struct NMMapView: View {
     @StateObject private var mapViewModel = MapViewModel()
     @StateObject private var cardListViewModel = CardListViewModel()
-
+    @State var isShowModal = true
+    
     var body: some View {
         ZStack {
             Map(
@@ -58,8 +59,8 @@ struct NMMapView: View {
                 , alignment: .top
             )
         }
-        .sheet(isPresented: $mapViewModel.isShowModal) {
-            SheetTestView(viewModel: cardListViewModel)
+        .sheet(isPresented: $isShowModal) {
+            CarouselView(viewModel: cardListViewModel, mapViewModel: mapViewModel)
                 .presentationDetents([.height(200)])
                 .presentationBackgroundInteraction(
                     .enabled(upThrough: .height(200)))

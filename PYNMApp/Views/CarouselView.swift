@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SheetTestView: View {
+struct CarouselView: View {
     @ObservedObject var viewModel = CardListViewModel()
     @ObservedObject var mapViewModel = MapViewModel()
     @State private var selectedIndex = 0
@@ -21,7 +21,7 @@ struct SheetTestView: View {
 //                .frame(width: 40, height: 6)
 //                .foregroundColor(.gray)
 //                .padding(.top, 8)
-            TabView {
+            TabView(selection: $selectedIndex) {
                 ForEach(Array(viewModel.cards.enumerated()), id: \.element.id) { index, card in
                     VStack {
                         Image(card.imageName)
@@ -51,5 +51,5 @@ struct SheetTestView: View {
 }
 
 #Preview {
-    SheetTestView()
+    CarouselView()
 }
