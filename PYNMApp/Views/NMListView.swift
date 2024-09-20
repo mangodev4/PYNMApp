@@ -35,10 +35,10 @@ struct NMListView: View {
                     }
                 }
             }
-            .navigationDestination(for: Card.self) { card in
-                CardDetailView(viewModel: viewModel, card: card)
-                    .environmentObject(navigationManager)
-            }
+//            .navigationDestination(for: Card.self) { card in
+//                CardDetailView(viewModel: viewModel, card: card)
+//                    .environmentObject(navigationManager)
+//            }
         }
         .environmentObject(navigationManager)
     }

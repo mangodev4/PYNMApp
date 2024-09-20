@@ -10,13 +10,14 @@ import MapKit
 
 
 struct NMMapView: View {
-    @StateObject private var viewModel = MapViewModel()
+    @StateObject private var mapViewModel = MapViewModel()
+    @StateObject private var cardListViewModel = CardListViewModel()
 
     var body: some View {
         ZStack {
             Map(
-                coordinateRegion: $viewModel.region,
-                annotationItems: viewModel.places
+                coordinateRegion: $mapViewModel.region,
+                annotationItems: mapViewModel.places
             ) { place in
                 MapAnnotation(
                     coordinate: place.coordinate
@@ -38,7 +39,7 @@ struct NMMapView: View {
                 }
             }
             .onAppear {
-                viewModel.loadPlaces()
+                mapViewModel.loadPlaces()
             }
             .edgesIgnoringSafeArea(.all)
             
@@ -47,6 +48,7 @@ struct NMMapView: View {
                     .frame(height: 60)
                 
                 Spacer()
+
             }
             .overlay(
                 Rectangle()
@@ -56,6 +58,24 @@ struct NMMapView: View {
                 , alignment: .top
             )
         }
+        .sheet(isPresented: $mapViewModel.isShowModal) {
+            SheetTestView(viewModel: cardListViewModel)
+                .presentationDetents([.height(200)])
+                .presentationBackgroundInteraction(
+                    .enabled(upThrough: .height(200)))
+                .presentationDragIndicator(.hidden)
+                .interactiveDismissDisabled(true)
+        }
+
+//        .sheet(isPresented: $mapViewModel.isShowModal) {
+//            CarouselView(mapViewModel: mapViewModel, cardListViewModel: cardListViewModel)
+//                .presentationDetents([.height(150)])
+//                .presentationBackground(.clear)
+//                .presentationBackgroundInteraction(
+//                    .enabled(upThrough: .height(150)))
+//                .presentationDragIndicator(.hidden)
+//                .interactiveDismissDisabled(true)
+//        }
     }
     // MARK: Sticky Header
     struct Header: View {
