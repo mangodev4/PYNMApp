@@ -8,7 +8,6 @@
 import SwiftUI
 import MapKit
 
-
 struct NMMapView: View {
     @StateObject private var mapViewModel = MapViewModel()
     @StateObject private var cardListViewModel = CardListViewModel()
