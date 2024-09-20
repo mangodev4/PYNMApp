@@ -13,6 +13,7 @@ class MapViewModel: ObservableObject {
     @Published var places: [NMPlace] = []
     @Published var region: MKCoordinateRegion
     @Published var currentIndex: Int = 0
+    @Published var isShowModal = true
 
     init() {
          self.region = MKCoordinateRegion(
