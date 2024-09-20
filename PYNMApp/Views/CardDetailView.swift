@@ -13,6 +13,10 @@ struct CardDetailView: View {
     @EnvironmentObject var navigationManager: NavigationManager
     @Environment(\.presentationMode) var presentationMode
     
+    @State private var isOn = false
+    
+//    @ObservedObject var viewModel: CardDetailViewModel
+
     var body: some View {
         ZStack {
             Color(.black)
@@ -25,21 +29,74 @@ struct CardDetailView: View {
                     .edgesIgnoringSafeArea(.bottom)
                 
                 VStack {
-                    Spacer()
+                    ZStack {
+                        Image(card.imageName)
+                            .resizable()
+                            .scaledToFit()
+                        //                        .frame(height: 300)
+                            .padding()
+                        
+                        
+                        
+                        Button(action: {
+                            withAnimation {
+                                isOn.toggle()
+                            }
+                        }) {
+                            Image(systemName: isOn ? "suit.heart.fill" : "suit.heart")
+                                .font(.largeTitle)
+                                .foregroundColor(isOn ? Color.red : Color.white)
+                        }
+                    }
+                    HStack {
+                        
+                        Text("가게 이름")
+                            .font(.pretendBold18)
+                        
+                        Spacer()
+                        
+                        Text(card.imageName)
+                            .font(.pretendBold18)
+                    }
                     
-                    Image(card.imageName)
-                        .resizable()
-                        .scaledToFit()
-                    //                        .frame(height: 300)
-                        .padding()
+                    Divider()
                     
-                    Text(card.imageName)
-                        .font(.largeTitle)
+                    HStack {
+                        
+                        Text("전화 번호")
+                            .font(.pretendBold18)
+                        
+                        Spacer()
+                        
+                        Text("000-0000-0000")
+                            .font(.pretendBold18)
+                    }
+
+
+                    Divider()
                     
-                    Spacer()
-                    
-                    Text("000-0000-0000")
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    HStack {
+                        
+                        Text("위치")
+                            .font(.pretendBold18)
+                        
+                        Spacer()
+                        
+                        let address = "서울특별시 중구 창경궁로 62-29"
+                        
+                        Text(address)
+                            .font(.pretendBold18)
+                        
+                        Button {
+                            UIPasteboard.general.string = address
+                        } label: {
+                            Image(systemName: "doc.on.doc")
+                        }
+
+                    }
+
+
+                    Divider()
                     
                     Spacer()
                     
@@ -53,6 +110,8 @@ struct CardDetailView: View {
                     .buttonStyle(OnboardingButtonStyle())
                     .padding()
                 }
+                .padding(.horizontal, 30)
+
             }
             .frame(maxHeight: .infinity)
         }
