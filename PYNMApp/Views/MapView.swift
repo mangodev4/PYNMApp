@@ -14,7 +14,6 @@ struct MapView: View {
     @State private var isShowModal = true
 //    @State private var modalHeight: PresentationDetent = .height(170)
     @StateObject private var bottomSheetManager = BottomSheetHeightManager()
-
     
     var body: some View {
         ZStack {
@@ -50,16 +49,19 @@ struct MapView: View {
                 Header()
                     .frame(height: 60)
                 
+                Spacer()
+
                 Button {
-                    bottomSheetManager.toggleHeight()
+                    bottomSheetManager.changeHeight(to: .expanded)
                 } label: {
                     Text("View List")
                 }
                 .frame(width: 100)
                 .buttonStyle(OnboardingButtonStyle())
-                
-                Spacer()
-                
+                .padding(.bottom, 180)
+//                .transition(.move(edge: .top))
+//                .offset(y: buttonOffset())
+//                .animation(.easeInOut, value: bottomSheetManager.changeHeight(to: .expanded))
             }
             .overlay(
                 Rectangle()
@@ -71,15 +73,25 @@ struct MapView: View {
         }
         .sheet(isPresented: $isShowModal) {
             NMListView(viewModel: CardListViewModel(),navigationManager: NavigationManager())
-                .presentationDetents([.height(170), .height(650)], selection: $bottomSheetManager.currentHeight)
+                .presentationDetents([.height(170), .height(700)], selection: Binding(
+                                    get: { bottomSheetManager.currentHeight.presentationDetent },
+                                    set: { _ in }
+                                ))
                 .presentationBackground(.clear)
                 .presentationBackgroundInteraction(
-                    .enabled(upThrough: .height(650)))
+                    .enabled(upThrough: .height(700)))
                 .presentationDragIndicator(.hidden)
                 .interactiveDismissDisabled(true)
         }
     }
     
+//    private func buttonOffset() -> CGFloat {
+//        if case .expanded = bottomSheetManager.currentHeight {
+//            return -700
+//        } else {
+//            return -170
+//        }
+//    }
     
     // MARK: Sticky Header
     struct Header: View {

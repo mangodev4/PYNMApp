@@ -18,7 +18,7 @@ enum BottomSheetState {
         case .collapsed:
             return .height(170)
         case .expanded:
-            return .height(650)
+            return .height(700)
         case .custom(let height):
             return .height(height)
         }
