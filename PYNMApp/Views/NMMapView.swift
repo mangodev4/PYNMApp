@@ -11,54 +11,59 @@ import MapKit
 struct NMMapView: View {
     @StateObject private var mapViewModel = MapViewModel()
     @StateObject private var cardListViewModel = CardListViewModel()
-    @State var isShowModal = true
+    @StateObject var navigationManager = NavigationManager()
+
+//    @State var isShowModal = true
     
     var body: some View {
-        ZStack {
-            Map(
-                coordinateRegion: $mapViewModel.region,
-                annotationItems: mapViewModel.places
-            ) { place in
-                MapAnnotation(
-                    coordinate: place.coordinate
-                ) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 5)
-                            .fill(Color.white.opacity(0.8))
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.secondary, lineWidth: 2)
-                        VStack {
-                            Image(systemName: "building.fill")
-                                .foregroundColor(.blue)
-                                .padding(5)
-                            Text(place.name)
-                                .font(.caption)
-                                .padding(5)
+        NavigationStack(path: $navigationManager.path) {
+            ZStack {
+                Map(
+                    coordinateRegion: $mapViewModel.region,
+                    annotationItems: mapViewModel.places
+                ) { place in
+                    MapAnnotation(
+                        coordinate: place.coordinate
+                    ) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 5)
+                                .fill(Color.white.opacity(0.8))
+                            RoundedRectangle(cornerRadius: 5)
+                                .stroke(Color.secondary, lineWidth: 2)
+                            VStack {
+                                Image(systemName: "building.fill")
+                                    .foregroundColor(.blue)
+                                    .padding(5)
+                                Text(place.name)
+                                    .font(.caption)
+                                    .padding(5)
+                            }
                         }
                     }
                 }
-            }
-            .onAppear {
-                mapViewModel.loadPlaces()
-            }
-            .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                Header()
-                    .frame(height: 60)
+                .onAppear {
+                    mapViewModel.loadPlaces()
+                }
+                .edgesIgnoringSafeArea(.all)
                 
-                Spacer()
-
+                VStack {
+                    Header(navigationManager: navigationManager)
+                        .frame(height: 60)
+                    
+                    Spacer()
+                    
+                }
+                .overlay(
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .frame(height: UIApplication.shared.windows.first?.safeAreaInsets.top)
+                        .edgesIgnoringSafeArea(.all)
+                        .allowsHitTesting(false)
+                    , alignment: .top
+                )
             }
-            .overlay(
-                Rectangle()
-                    .foregroundColor(.white)
-                    .frame(height: UIApplication.shared.windows.first?.safeAreaInsets.top)
-                    .edgesIgnoringSafeArea(.all)
-                , alignment: .top
-            )
         }
-        .sheet(isPresented: $isShowModal) {
+        .sheet(isPresented: $mapViewModel.isShowModal) {
             CarouselView(viewModel: cardListViewModel, mapViewModel: mapViewModel)
                 .presentationDetents([.height(200)])
                 .presentationBackgroundInteraction(
@@ -67,6 +72,11 @@ struct NMMapView: View {
                 .interactiveDismissDisabled(true)
                 .presentationBackground(.clear)
         }
+        .navigationDestination(for: Card.self) { card in
+                        NMListView()
+                                .environmentObject(navigationManager)
+                        
+                    }
         .navigationBarBackButtonHidden()
 
 //        .sheet(isPresented: $mapViewModel.isShowModal) {
@@ -79,16 +89,40 @@ struct NMMapView: View {
 //                .interactiveDismissDisabled(true)
 //        }
     }
+    
     // MARK: Sticky Header
     struct Header: View {
+        @ObservedObject var navigationManager: NavigationManager
+        @StateObject private var mapViewModel = MapViewModel()
+
+//        @Binding var isShowModal
+
         var body: some View {
             VStack {
                 Spacer()
-                Image(systemName: "photo.fill")
-                    .font(.largeTitle)
+                HStack {
+                    Spacer()
+
+                    Image(systemName: "photo.fill")
+                        .font(.largeTitle)
+                    
+                    Button {
+                        mapViewModel.isShowModal = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            navigationManager.resetNavigation()
+                            navigationManager.navigateToNMListView()
+                        }
+                    } label: {
+                        Text("View List")
+                    }
+                    
+
+                }
                 Spacer()
                 Divider()
             }
+            .buttonStyle(HeaderButtonStyle())
+
             .frame(minWidth: 0, maxWidth: .infinity)
             .frame(height: 60)
             .background(Rectangle().foregroundColor(.white))

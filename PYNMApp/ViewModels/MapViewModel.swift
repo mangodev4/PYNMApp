@@ -15,7 +15,7 @@ class MapViewModel: ObservableObject {
 //    @Published var currentIndex: Int = 0
     @Published var selectedCardIndex: Int = 0
     @Published var selectedPlace: NMPlace?
-//    @Published var isShowModal = true
+    @Published var isShowModal = true
 
     init() {
          self.region = MKCoordinateRegion(

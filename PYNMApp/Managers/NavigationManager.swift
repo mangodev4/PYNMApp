@@ -18,6 +18,10 @@ class NavigationManager: ObservableObject {
         path.append(selectedCard)
     }
     
+    func navigateToNMListView() {
+        path.append("NMListView")
+    }
+    
     func goBack() {
         DispatchQueue.main.async {
             if self.path.count > 0 {
@@ -29,6 +33,6 @@ class NavigationManager: ObservableObject {
     }
     
     func resetNavigation() {
-        path.removeLast(path.count)
+        path = NavigationPath()
     }
 }

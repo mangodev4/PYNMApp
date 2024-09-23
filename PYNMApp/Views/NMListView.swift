@@ -21,13 +21,7 @@ struct NMListView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(cardListViewModel.cards) { card in
-                        ZStack {
-                            Button(action: {
-                                navigationManager.navigateToMapView(selectedCard: card)
-                                if let index = cardListViewModel.cards.firstIndex(where: { $0.id == card.id }) {
-                                    mapViewModel.selectedCardIndex = index
-                                }
-                            }) {
+                        VStack {
                                 Image(card.imageName)
                                     .resizable()
                                     .scaledToFill()
@@ -43,19 +37,18 @@ struct NMListView: View {
                     }
                 }
             }
-            .navigationDestination(for: Card.self) { card in
-                NMMapView()
-                    .environmentObject(navigationManager)
-                    .onAppear {
-                        if let index = cardListViewModel.cards.firstIndex(where: { $0.id == card.id }) {
-                            mapViewModel.selectedCardIndex = index
-                        }
-                    }
-            }
+//            .navigationDestination(for: Card.self) { card in
+//                NMMapView()
+//                    .environmentObject(navigationManager)
+//                    .onAppear {
+//                        if let index = cardListViewModel.cards.firstIndex(where: { $0.id == card.id }) {
+//                            mapViewModel.selectedCardIndex = index
+//                        }
+//                    }
+//            }
         }
-//        .environmentObject(navigationManager)
     }
-}
+
 
 
 #Preview {
