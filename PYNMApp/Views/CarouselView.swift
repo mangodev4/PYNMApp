@@ -38,7 +38,11 @@ struct CarouselView: View {
             .tabViewStyle(PageTabViewStyle())
             .frame(height: 200)
             .onChange(of: selectedIndex) { newIndex in
-                mapViewModel.movePlace()
+                if newIndex < sampleNMPlaces.count {
+                    let selectedPlace = sampleNMPlaces[newIndex]
+                    mapViewModel.updatePlace(to: selectedPlace)
+                }
+//                mapViewModel.movePlace()
             }
         }
         .frame(maxWidth: .infinity)

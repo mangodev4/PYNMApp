@@ -14,6 +14,7 @@ class MapViewModel: ObservableObject {
     @Published var region: MKCoordinateRegion
 //    @Published var currentIndex: Int = 0
     @Published var selectedCardIndex: Int = 0
+    @Published var selectedPlace: NMPlace?
 //    @Published var isShowModal = true
 
     init() {
@@ -30,6 +31,16 @@ class MapViewModel: ObservableObject {
                 self.places = sampleNMPlaces
             }
         }
+    
+    func updatePlace(to place: NMPlace) {
+        self.selectedPlace = place
+        withAnimation {
+            self.region = MKCoordinateRegion(
+                center: place.coordinate,
+                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            )
+        }
+    }
         
         func movePlace() {
             withAnimation(Animation.linear(duration: 4.0)) {
