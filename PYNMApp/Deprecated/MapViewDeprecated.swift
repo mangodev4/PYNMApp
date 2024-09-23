@@ -72,7 +72,7 @@ struct MapView: View {
             )
         }
         .sheet(isPresented: $isShowModal) {
-            NMListView(viewModel: CardListViewModel(),navigationManager: NavigationManager())
+            NMListView(navigationManager: NavigationManager())
                 .presentationDetents([.height(170), .height(700)], selection: Binding(
                                     get: { bottomSheetManager.currentHeight.presentationDetent },
                                     set: { _ in }

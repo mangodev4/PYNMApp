@@ -40,7 +40,7 @@ struct NMListViewDeprecated: View {
                         ForEach(viewModel.cards) { card in
                             ZStack {
                                 Button(action: {
-                                    navigationManager.navigateToCardDetail(card: card)
+//                                    navigationManager.navigateToCardDetail(card: card)
                                 }) {
                                     Image(card.imageName)
                                         .resizable()
