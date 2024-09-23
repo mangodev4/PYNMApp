@@ -43,7 +43,7 @@ struct CarouselView: View {
         }
         .frame(maxWidth: .infinity)
         .background(Color.white)
-        .cornerRadius(20)
+        .cornerRadius(16)
         .shadow(radius: 10)
         .transition(.move(edge: .bottom))
         .animation(.easeInOut)

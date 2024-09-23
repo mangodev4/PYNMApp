@@ -65,7 +65,9 @@ struct NMMapView: View {
                     .enabled(upThrough: .height(200)))
                 .presentationDragIndicator(.hidden)
                 .interactiveDismissDisabled(true)
+                .presentationBackground(.clear)
         }
+        .navigationBarBackButtonHidden()
 
 //        .sheet(isPresented: $mapViewModel.isShowModal) {
 //            CarouselView(mapViewModel: mapViewModel, cardListViewModel: cardListViewModel)
