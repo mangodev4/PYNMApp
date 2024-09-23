@@ -12,7 +12,8 @@ import MapKit
 class MapViewModel: ObservableObject {
     @Published var places: [NMPlace] = []
     @Published var region: MKCoordinateRegion
-    @Published var currentIndex: Int = 0
+//    @Published var currentIndex: Int = 0
+    @Published var selectedCardIndex: Int = 0
 //    @Published var isShowModal = true
 
     init() {
@@ -32,8 +33,8 @@ class MapViewModel: ObservableObject {
         
         func movePlace() {
             withAnimation(Animation.linear(duration: 4.0)) {
-                currentIndex = (currentIndex + 1) % places.count
-                region.center = places[currentIndex].coordinate
+                selectedCardIndex = (selectedCardIndex + 1) % places.count
+                region.center = places[selectedCardIndex].coordinate
                 region.span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
             }
         }
