@@ -22,8 +22,8 @@ class NavigationManager: ObservableObject {
         path.append("NMListView")
     }
 
-    func navigateToMapView() {
-        path.append("MapView")
+    func navigateToNMMapView() {
+        path.append("NMMapView")
     }
     
     func goBack() {

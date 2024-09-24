@@ -48,30 +48,26 @@ struct NMMapView: View {
                 .edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    Header(navigationManager: navigationManager)
-                        .frame(height: 60)
-                    
-                    Spacer()
+//                    Header()
+//                        .frame(height: 60)
+//                    
+//                    Spacer()
                 }
-                .overlay(
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(height: UIApplication.shared.windows.first?.safeAreaInsets.top)
-                        .edgesIgnoringSafeArea(.all)
-                        .allowsHitTesting(false)
-                    , alignment: .top
-                )
-                HStack {
-                    Spacer()
-                    
-                    Button {
-                        mapViewModel.isShowModal = false
-                    } label: {
-                        Text("View List")
-                    }
-                    .buttonStyle(HeaderButtonStyle())
-                }
-                .padding(.top, 10)
+                
+//                HStack {
+//                    Spacer()
+//                    
+//                    Button {
+//                        mapViewModel.isShowModal = false
+//                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+////                            mapViewModel.isShowList = true
+//                        }
+//                    } label: {
+//                        Text("View List")
+//                    }
+//                    .buttonStyle(HeaderButtonStyle())
+//                }
+//                .padding(.top, 10)
             }
         }
         .sheet(isPresented: $mapViewModel.isShowModal) {
@@ -83,6 +79,10 @@ struct NMMapView: View {
                 .interactiveDismissDisabled(true)
                 .presentationBackground(.clear)
         }
+        .sheet(isPresented: $mapViewModel.isShowList) {
+            NMListView(cardListViewModel: cardListViewModel, mapViewModel: mapViewModel)
+        }
+        
         .navigationBarBackButtonHidden()
         .navigationDestination(for: Card.self) { card in
                         NMListView()
@@ -101,28 +101,7 @@ struct NMMapView: View {
 //                .interactiveDismissDisabled(true)
 //        }
     }
-    
-    
-    // MARK: Sticky Header
-    struct Header: View {
-        @ObservedObject var navigationManager: NavigationManager
-        @StateObject private var mapViewModel = MapViewModel()
 
-        var body: some View {
-            VStack {
-                Spacer()
-                    Image(systemName: "photo.fill")
-                        .font(.largeTitle)
-                
-                Spacer()
-                Divider()
-            }
-
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .frame(height: 60)
-            .background(Rectangle().foregroundColor(.white))
-        }
-    }
 }
 
 #Preview {

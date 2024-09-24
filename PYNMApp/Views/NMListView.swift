@@ -10,14 +10,14 @@ import SwiftUI
 struct NMListView: View {
     @ObservedObject var cardListViewModel = CardListViewModel()
     @StateObject var mapViewModel = MapViewModel()
-    @StateObject var navigationManager = NavigationManager()
+//    @StateObject var navigationManager = NavigationManager()
 //    @EnvironmentObject var navigationManager: NavigationManager
-    @Environment(\.presentationMode) var presentationMode
+//    @Environment(\.presentationMode) var presentationMode
 
 
     
     var body: some View {
-        NavigationStack(path: $navigationManager.path) {
+//        NavigationStack(path: $navigationManager.path) {
             ZStack(alignment: .top){
                 VStack {
                     StickyHeader()
@@ -39,14 +39,17 @@ struct NMListView: View {
                             .background(Color.clear)
                         }
                     }
-                }
+                
                 
                 HStack(alignment: .top) {
                     Spacer()
 
                     Button {
+                        mapViewModel.isShowList = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
 //                            mapViewModel.isShowModal = true
-                        
+                        }
+
                         
                     } label: {
                         Text("View Map")
