@@ -21,6 +21,10 @@ class NavigationManager: ObservableObject {
     func navigateToNMListView() {
         path.append("NMListView")
     }
+
+    func navigateToMapView() {
+        path.append("MapView")
+    }
     
     func goBack() {
         DispatchQueue.main.async {

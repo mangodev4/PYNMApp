@@ -43,6 +43,7 @@ struct NMMapView: View {
                 }
                 .onAppear {
                     mapViewModel.loadPlaces()
+                        mapViewModel.isShowModal = true
                 }
                 .edgesIgnoringSafeArea(.all)
                 
@@ -50,8 +51,19 @@ struct NMMapView: View {
                     Header(navigationManager: navigationManager)
                         .frame(height: 60)
                     
-                    Spacer()
+                    Button {
+                        mapViewModel.isShowModal = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            navigationManager.resetNavigation()
+                            navigationManager.navigateToNMListView()
+                                                   }
+                    } label: {
+                        Text("View List")
+                    }
+                    .buttonStyle(HeaderButtonStyle())
                     
+                    Spacer()
+
                 }
                 .overlay(
                     Rectangle()
@@ -72,12 +84,13 @@ struct NMMapView: View {
                 .interactiveDismissDisabled(true)
                 .presentationBackground(.clear)
         }
+        .navigationBarBackButtonHidden()
         .navigationDestination(for: Card.self) { card in
                         NMListView()
-                                .environmentObject(navigationManager)
+                .environmentObject(navigationManager)
                         
                     }
-        .navigationBarBackButtonHidden()
+
 
 //        .sheet(isPresented: $mapViewModel.isShowModal) {
 //            CarouselView(mapViewModel: mapViewModel, cardListViewModel: cardListViewModel)
@@ -90,6 +103,7 @@ struct NMMapView: View {
 //        }
     }
     
+    
     // MARK: Sticky Header
     struct Header: View {
         @ObservedObject var navigationManager: NavigationManager
@@ -100,28 +114,12 @@ struct NMMapView: View {
         var body: some View {
             VStack {
                 Spacer()
-                HStack {
-                    Spacer()
-
                     Image(systemName: "photo.fill")
                         .font(.largeTitle)
-                    
-                    Button {
-                        mapViewModel.isShowModal = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            navigationManager.resetNavigation()
-                            navigationManager.navigateToNMListView()
-                        }
-                    } label: {
-                        Text("View List")
-                    }
-                    
-
-                }
+                
                 Spacer()
                 Divider()
             }
-            .buttonStyle(HeaderButtonStyle())
 
             .frame(minWidth: 0, maxWidth: .infinity)
             .frame(height: 60)
