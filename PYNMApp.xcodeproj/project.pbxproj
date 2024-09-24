@@ -24,7 +24,7 @@
 		A58459452C92B9C100340D9C /* NMListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58459442C92B9C000340D9C /* NMListView.swift */; };
 		A58459482C93F9D700340D9C /* NMPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58459472C93F9D700340D9C /* NMPlaces.swift */; };
 		A584594A2C9416F700340D9C /* TransparentBackgroundViewDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58459492C9416F700340D9C /* TransparentBackgroundViewDeprecated.swift */; };
-		A584594C2C9424C100340D9C /* ModalSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584594B2C9424C100340D9C /* ModalSheetView.swift */; };
+		A584594C2C9424C100340D9C /* ModalSheetViewDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584594B2C9424C100340D9C /* ModalSheetViewDeprecated.swift */; };
 		A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152B2C882887009E1766 /* PYNMAppApp.swift */; };
 		A5D2152E2C882887009E1766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2152D2C882887009E1766 /* ContentView.swift */; };
 		A5D215302C882889009E1766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5D2152F2C882889009E1766 /* Assets.xcassets */; };
@@ -64,7 +64,7 @@
 		A58459442C92B9C000340D9C /* NMListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMListView.swift; sourceTree = "<group>"; };
 		A58459472C93F9D700340D9C /* NMPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMPlaces.swift; sourceTree = "<group>"; };
 		A58459492C9416F700340D9C /* TransparentBackgroundViewDeprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentBackgroundViewDeprecated.swift; sourceTree = "<group>"; };
-		A584594B2C9424C100340D9C /* ModalSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSheetView.swift; sourceTree = "<group>"; };
+		A584594B2C9424C100340D9C /* ModalSheetViewDeprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSheetViewDeprecated.swift; sourceTree = "<group>"; };
 		A5D215282C882887009E1766 /* PYNMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PYNMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D2152B2C882887009E1766 /* PYNMAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PYNMAppApp.swift; sourceTree = "<group>"; };
 		A5D2152D2C882887009E1766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +102,7 @@
 		A58459432C92B98300340D9C /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
+				A584594B2C9424C100340D9C /* ModalSheetViewDeprecated.swift */,
 				A530B01B2C9D3886009F67B3 /* CarouselViewDeprecated.swift */,
 				A58459392C9047EF00340D9C /* CardDetailViewModelDeprecated.swift */,
 				A584593B2C9149F900340D9C /* MapViewDeprecated.swift */,
@@ -224,7 +225,6 @@
 				A5D2155D2C885A51009E1766 /* CardDetailView.swift */,
 				A501E6902C8AF32900544E2E /* ButtonStyle.swift */,
 				A58459442C92B9C000340D9C /* NMListView.swift */,
-				A584594B2C9424C100340D9C /* ModalSheetView.swift */,
 				A530B0162C9D0836009F67B3 /* NMMapView.swift */,
 				A530B01D2C9D51F5009F67B3 /* CarouselView.swift */,
 			);
@@ -338,7 +338,7 @@
 				A584593A2C9047EF00340D9C /* CardDetailViewModelDeprecated.swift in Sources */,
 				A58459422C92B08500340D9C /* MainViewDeprecated.swift in Sources */,
 				A5D2152E2C882887009E1766 /* ContentView.swift in Sources */,
-				A584594C2C9424C100340D9C /* ModalSheetView.swift in Sources */,
+				A584594C2C9424C100340D9C /* ModalSheetViewDeprecated.swift in Sources */,
 				A501E6912C8AF32900544E2E /* ButtonStyle.swift in Sources */,
 				A5D2152C2C882887009E1766 /* PYNMAppApp.swift in Sources */,
 				A5D215472C884F4C009E1766 /* ColorExtension.swift in Sources */,
