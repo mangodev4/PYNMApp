@@ -71,6 +71,7 @@ struct NMMapView: View {
                     }
                     .buttonStyle(HeaderButtonStyle())
                 }
+                .padding(.top, 10)
             }
         }
         .sheet(isPresented: $mapViewModel.isShowModal) {
