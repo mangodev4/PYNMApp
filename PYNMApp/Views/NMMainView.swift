@@ -18,24 +18,31 @@ struct NMMainView: View {
     
     
     var body: some View {
-        VStack {
-            Header()
-            if currentView == .mapView {
-                NMMapView()
-            } else {
-                NMListView()
+        ZStack(alignment: .top) {
+            VStack {
+                if currentView == .mapView {
+                    NMMapView()
+                } else {
+                    NMListView()
+                }
+                Spacer()
             }
-            Spacer()
-            
-            // MARK: View Change Button
-            Button(action: {
-                toggleView()
-            }) {
-                Text(currentView == .mapView ? "View List" : "View Map")
-                    .padding()
+            VStack {
+                Header()
+                
+                Spacer()
             }
-            .buttonStyle(HeaderButtonStyle())
-            .padding()
+            HStack(alignment: .top) {
+                Spacer()
+                // MARK: View Change Button
+                Button(action: {
+                    toggleView()
+                }) {
+                    Text(currentView == .mapView ? "View List" : "View Map")
+                }
+                .buttonStyle(HeaderButtonStyle())
+                .padding(.top, 10)
+            }
         }
         
         .overlay(
@@ -59,15 +66,16 @@ private func toggleView() {
     // MARK: Sticky Header
     struct Header: View {
         var body: some View {
-            VStack {
-                Spacer()
+            ZStack {
+                VStack {
+                    Spacer()
                     Image(systemName: "photo.fill")
                         .font(.largeTitle)
-                
-                Spacer()
-                Divider()
+                    
+                    Spacer()
+                    Divider()
+                }
             }
-
             .frame(minWidth: 0, maxWidth: .infinity)
             .frame(height: 60)
             .background(Rectangle().foregroundColor(.white))
