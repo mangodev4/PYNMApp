@@ -17,7 +17,7 @@ struct NMMapView: View {
     
     var body: some View {
         NavigationStack(path: $navigationManager.path) {
-            ZStack {
+            ZStack(alignment: .top) {
                 Map(
                     coordinateRegion: $mapViewModel.region,
                     annotationItems: mapViewModel.places
@@ -51,19 +51,7 @@ struct NMMapView: View {
                     Header(navigationManager: navigationManager)
                         .frame(height: 60)
                     
-                    Button {
-                        mapViewModel.isShowModal = false
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                            navigationManager.resetNavigation()
-                            navigationManager.navigateToNMListView()
-                                                   }
-                    } label: {
-                        Text("View List")
-                    }
-                    .buttonStyle(HeaderButtonStyle())
-                    
                     Spacer()
-
                 }
                 .overlay(
                     Rectangle()
@@ -73,6 +61,16 @@ struct NMMapView: View {
                         .allowsHitTesting(false)
                     , alignment: .top
                 )
+                HStack {
+                    Spacer()
+                    
+                    Button {
+                        mapViewModel.isShowModal = false
+                    } label: {
+                        Text("View List")
+                    }
+                    .buttonStyle(HeaderButtonStyle())
+                }
             }
         }
         .sheet(isPresented: $mapViewModel.isShowModal) {
@@ -108,8 +106,6 @@ struct NMMapView: View {
     struct Header: View {
         @ObservedObject var navigationManager: NavigationManager
         @StateObject private var mapViewModel = MapViewModel()
-
-//        @Binding var isShowModal
 
         var body: some View {
             VStack {
