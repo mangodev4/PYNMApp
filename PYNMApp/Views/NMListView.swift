@@ -24,8 +24,17 @@ struct NMListView: View {
                                     .resizable()
                                     .scaledToFill()
                                     .cornerRadius(8)
-                                    .opacity(card.opacity)
-                                Text(card.imageName)
+//                                    .opacity(card.opacity)
+                                HStack {
+                                    Text(card.imageName)
+                                    
+                                    Button {
+                                        cardListViewModel.toggleBookmark(for: card.id)
+                                    } label: {
+                                        Image(systemName: card.isBookmarked ?  "bookmark.fill" : "bookmark")
+                                            .foregroundColor(card.isBookmarked ? .yellow : .gray)
+                                    }
+                                }
                             }
                         }
                         .frame(maxWidth: .infinity, maxHeight: 150)

@@ -24,6 +24,13 @@ class CardListViewModel: ObservableObject {
             self?.loadCards()
         }
     }
+       
+       func toggleBookmark(for id: UUID) {
+           if let index = cards.firstIndex(where: { $0.id == id }) {
+               cards[index].isBookmarked.toggle()
+               saveCards()
+           }
+       }
     
     func updateCardImage(id: UUID, newImageName: String) {
         if let index = cards.firstIndex(where: { $0.id == id }) {
