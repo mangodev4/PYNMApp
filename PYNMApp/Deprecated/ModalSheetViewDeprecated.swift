@@ -1,28 +1,28 @@
+////
+////  ModalSheetView.swift
+////  PYNMApp
+////
+////  Created by Yujin Son on 9/13/24.
+////
 //
-//  ModalSheetView.swift
-//  PYNMApp
+//import SwiftUI
 //
-//  Created by Yujin Son on 9/13/24.
+//struct ModalSheetView: View {
+//    @ObservedObject var viewModel: MapViewModel
+//    
+//    var body: some View {
+//            Button {
+//                withAnimation {
+//                    viewModel.movePlace()
+//                }
+//            } label: {
+//                Text("Teleport")
+//            }
+//            .frame(width: 350)
+//            .buttonStyle(OnboardingButtonStyle())
+//    }
+//}
 //
-
-import SwiftUI
-
-struct ModalSheetView: View {
-    @ObservedObject var viewModel: MapViewModel
-    
-    var body: some View {
-            Button {
-                withAnimation {
-                    viewModel.movePlace()
-                }
-            } label: {
-                Text("Teleport")
-            }
-            .frame(width: 350)
-            .buttonStyle(OnboardingButtonStyle())
-    }
-}
-
-#Preview {
-    ModalSheetView(viewModel: MapViewModel())
-}
+////#Preview {
+////    ModalSheetView(viewModel: MapViewModel())
+////}
