@@ -12,10 +12,9 @@ enum ViewState {
     case listView
 }
 
-
 struct NMMainView: View {
+    @State private var isPressed = false
     @State private var currentView: ViewState = .mapView
-    
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -34,17 +33,13 @@ struct NMMainView: View {
             }
             HStack(alignment: .top) {
                 Spacer()
-                // MARK: View Change Button
-                Button(action: {
-                    toggleView()
-                }) {
-                    Text(currentView == .mapView ? "View List" : "View Map")
-                }
-                .buttonStyle(HeaderButtonStyle())
-                .padding(.top, 10)
+                ViewToggleButton(
+                    currentView: $currentView,
+                    isPressed: $isPressed,
+                    toggleView: toggleView
+                )
             }
         }
-        
         .overlay(
             Rectangle()
                 .foregroundColor(.white)
@@ -56,13 +51,10 @@ struct NMMainView: View {
         .animation(.easeInOut, value: currentView)
     }
     
-
-        
+    private func toggleView() {
+        currentView = (currentView == .mapView) ? .listView : .mapView
+    }
     
-private func toggleView() {
-    currentView = (currentView == .mapView) ? .listView : .mapView
-}
-
     // MARK: Sticky Header
     struct Header: View {
         var body: some View {
@@ -80,6 +72,42 @@ private func toggleView() {
             .frame(height: 60)
             .background(Rectangle().foregroundColor(.white))
         }
+    }
+}
+
+// MARK: View Change Button
+struct ViewToggleButton: View {
+    @Binding var currentView: ViewState
+    @Binding var isPressed: Bool
+    
+    var toggleView: () -> Void
+    
+    var body: some View {
+        Button(action: {
+            withAnimation {
+                toggleView()
+            }
+        }) {
+            Text(currentView == .mapView ? "View List" : "View Map")
+                .frame(width: 100)
+                .scaleEffect(isPressed ? 0.9 : 1.0)
+                .animation(.spring(response: 0.3, dampingFraction: 0.6), value: isPressed)
+        }
+        .buttonStyle(HeaderButtonStyle())
+        .padding(.top, 10)
+        .simultaneousGesture(
+            DragGesture(minimumDistance: 0)
+                .onChanged { _ in
+                    withAnimation {
+                        isPressed = true
+                    }
+                }
+                .onEnded { _ in
+                    withAnimation {
+                        isPressed = false
+                    }
+                }
+        )
     }
 }
 
