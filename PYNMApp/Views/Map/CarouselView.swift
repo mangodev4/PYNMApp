@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CarouselView: View {
     @ObservedObject var viewModel = CardListViewModel()
-    @ObservedObject var mapViewModel = MapViewModel()
+    @ObservedObject var mapViewModel = MapViewModel(cardListViewModel: CardListViewModel())
     @State private var selectedIndex = 0
 
     

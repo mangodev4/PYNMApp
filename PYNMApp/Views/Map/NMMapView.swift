@@ -10,7 +10,7 @@ import MapKit
 
 
 struct NMMapView: View {
-    @StateObject private var mapViewModel = MapViewModel()
+    @StateObject private var mapViewModel = MapViewModel(cardListViewModel: CardListViewModel())
     @StateObject private var cardListViewModel = CardListViewModel()
     
     var body: some View {
@@ -28,9 +28,11 @@ struct NMMapView: View {
                         RoundedRectangle(cornerRadius: 5)
                             .stroke(Color.secondary, lineWidth: 2)
                         VStack {
-                            Image(systemName: "building.fill")
-                                .foregroundColor(.blue)
-                                .padding(5)
+                            if let index = mapViewModel.places.firstIndex(where: { $0.id == place.id }) {
+                                Image(systemName: "building.fill")
+                                    .foregroundColor(cardListViewModel.cards[index].isBookmarked ? .red : .blue)
+                                    .padding(5)
+                            }
                             Text(place.name)
                                 .font(.caption)
                                 .padding(5)
@@ -68,6 +70,7 @@ struct NMMapView: View {
         }
     }
 }
+
 
 #Preview {
     NMMapView()

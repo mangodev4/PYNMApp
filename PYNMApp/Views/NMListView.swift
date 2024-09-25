@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NMListView: View {
     @ObservedObject var cardListViewModel = CardListViewModel()
-    @StateObject var mapViewModel = MapViewModel()
+    @StateObject var mapViewModel = MapViewModel(cardListViewModel: CardListViewModel())
     //    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
