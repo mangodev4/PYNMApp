@@ -39,7 +39,7 @@ struct CarouselView: View {
                             }
                         }
                         Text("02-1234-1234")
-                        Text("서울특별시 중구 창경궁로 62-29")
+                        Text(card.address)
                     }
                     .tag(index)
                 }
