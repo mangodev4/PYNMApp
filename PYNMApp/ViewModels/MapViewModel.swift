@@ -24,7 +24,7 @@ class MapViewModel: ObservableObject {
     init(cardListViewModel: CardListViewModel) {
         self.cardListViewModel = cardListViewModel
         self.region = MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 37.503774633134, longitude: 127.048192060882),
+            center: CLLocationCoordinate2D(latitude: 37.568218524634, longitude: 126.998714470746),
             span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         )
     }
