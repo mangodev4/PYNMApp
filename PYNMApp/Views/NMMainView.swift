@@ -27,7 +27,7 @@ struct NMMainView: View {
                 Spacer()
             }
             VStack {
-                Header()
+                Header
                 
                 Spacer()
             }
@@ -56,8 +56,8 @@ struct NMMainView: View {
     }
     
     // MARK: Sticky Header
-    struct Header: View {
-        var body: some View {
+    @ViewBuilder
+    private var Header: some View {
             ZStack {
                 VStack {
                     Spacer()
@@ -71,7 +71,6 @@ struct NMMainView: View {
             .frame(minWidth: 0, maxWidth: .infinity)
             .frame(height: 60)
             .background(Rectangle().foregroundColor(.white))
-        }
     }
 }
 

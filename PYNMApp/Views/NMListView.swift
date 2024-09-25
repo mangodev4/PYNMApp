@@ -15,7 +15,7 @@ struct NMListView: View {
     var body: some View {
         ZStack(alignment: .top){
             VStack {
-                HeaderSection()
+                HeaderSection
                 ScrollView {
                     LazyVStack {
                         ForEach(cardListViewModel.cards) { card in
@@ -28,6 +28,7 @@ struct NMListView: View {
                                 HStack {
                                     Text(card.imageName)
                                     
+                                    // MARK: Bookmark Button
                                     Button {
                                         cardListViewModel.toggleBookmark(for: card.id)
                                     } label: {
@@ -53,8 +54,8 @@ struct NMListView: View {
 }
 
 // MARK: Header Section
-struct HeaderSection: View {
-    var body: some View {
+@ViewBuilder
+private var HeaderSection: some View {
         Spacer()
 
         VStack {
@@ -69,7 +70,7 @@ struct HeaderSection: View {
         .frame(height: 50)
         .background(Rectangle().foregroundColor(.white))
     }
-}
+
 
 #Preview {
     NMListView()
