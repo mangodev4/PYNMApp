@@ -106,6 +106,7 @@
 		A58459432C92B98300340D9C /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
+				A530B0162C9D0836009F67B3 /* NMMapViewDeprecated.swift */,
 				A584594B2C9424C100340D9C /* ModalSheetViewDeprecated.swift */,
 				A530B01B2C9D3886009F67B3 /* CarouselViewDeprecated.swift */,
 				A58459392C9047EF00340D9C /* CardDetailViewModelDeprecated.swift */,
@@ -128,6 +129,23 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		A5A435BE2CA3979500A4D7C2 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				A530B0252CA2BBB1009F67B3 /* NMMapView.swift */,
+				A530B01D2C9D51F5009F67B3 /* CarouselView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		A5A435BF2CA397B300A4D7C2 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				A501E6902C8AF32900544E2E /* ButtonStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		A5D2151F2C882887009E1766 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +165,7 @@
 		A5D2152A2C882887009E1766 /* PYNMApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5A435BF2CA397B300A4D7C2 /* Styles */,
 				A58459462C93F99200340D9C /* ViewModels */,
 				A58459432C92B98300340D9C /* Deprecated */,
 				A5D215562C885846009E1766 /* Models */,
@@ -225,14 +244,11 @@
 		A5D215552C88520D009E1766 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A5A435BE2CA3979500A4D7C2 /* Map */,
 				A5D2152D2C882887009E1766 /* ContentView.swift */,
 				A5D2155D2C885A51009E1766 /* CardDetailView.swift */,
-				A501E6902C8AF32900544E2E /* ButtonStyle.swift */,
 				A58459442C92B9C000340D9C /* NMListView.swift */,
-				A530B0162C9D0836009F67B3 /* NMMapViewDeprecated.swift */,
-				A530B01D2C9D51F5009F67B3 /* CarouselView.swift */,
 				A530B0232CA2AD02009F67B3 /* NMMainView.swift */,
-				A530B0252CA2BBB1009F67B3 /* NMMapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
