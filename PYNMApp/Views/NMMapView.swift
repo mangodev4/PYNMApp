@@ -6,13 +6,69 @@
 //
 
 import SwiftUI
+import MapKit
 
-struct NMapView: View {
+
+struct NMMapView: View {
+    @StateObject private var mapViewModel = MapViewModel()
+    @StateObject private var cardListViewModel = CardListViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .top) {
+            Map(
+                coordinateRegion: $mapViewModel.region,
+                annotationItems: mapViewModel.places
+            ) { place in
+                MapAnnotation(
+                    coordinate: place.coordinate
+                ) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 5)
+                            .fill(Color.white.opacity(0.8))
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.secondary, lineWidth: 2)
+                        VStack {
+                            Image(systemName: "building.fill")
+                                .foregroundColor(.blue)
+                                .padding(5)
+                            Text(place.name)
+                                .font(.caption)
+                                .padding(5)
+                        }
+                    }
+                }
+            }
+//            .onAppear {
+//                mapViewModel.loadPlaces()
+//                mapViewModel.isShowModal = true
+//            }
+            .edgesIgnoringSafeArea(.all)
+            
+            if mapViewModel.isShowModal {
+                            Color.black.opacity(0.4)
+                                .ignoresSafeArea()
+                                .onTapGesture {
+                                    withAnimation(.none) {
+                                        mapViewModel.isShowModal.toggle()
+                                    }
+                                }
+                            
+                            CarouselView(viewModel: cardListViewModel, mapViewModel: mapViewModel)
+                                .transition(.move(edge: .bottom))
+                                .animation(.none)
+                        }
+        }
+        .onAppear {
+            mapViewModel.loadPlaces()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        withAnimation(.none) {
+                            mapViewModel.isShowModal.toggle()
+                        }
+                    }
+                }
     }
 }
 
 #Preview {
-    NMapView()
+    NMMapView()
 }
