@@ -12,6 +12,7 @@ struct NMPlace: Identifiable {
     let id = UUID()
     let name: String
     let coordinate: CLLocationCoordinate2D
+    var isBookmarked: Bool = false
 }
 
 let sampleNMPlaces: [NMPlace] = [

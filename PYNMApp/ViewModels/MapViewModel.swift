@@ -19,12 +19,23 @@ class MapViewModel: ObservableObject {
     @Published var isShowList = false
 
 
-    init() {
-         self.region = MKCoordinateRegion(
-             center: CLLocationCoordinate2D(latitude: 37.503774633134, longitude: 127.048192060882),
-             span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-         )
-     }
+    @ObservedObject var cardListViewModel: CardListViewModel
+
+    init(cardListViewModel: CardListViewModel) {
+        self.cardListViewModel = cardListViewModel
+        self.region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 37.503774633134, longitude: 127.048192060882),
+            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        )
+    }
+
+    
+//    init() {
+//         self.region = MKCoordinateRegion(
+//             center: CLLocationCoordinate2D(latitude: 37.503774633134, longitude: 127.048192060882),
+//             span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+//         )
+//     }
      
         
         
@@ -51,5 +62,13 @@ class MapViewModel: ObservableObject {
                 region.span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
             }
         }
+    
+    func isBookmarkedForCurrentPlace() -> Bool {
+        if let selectedPlaceIndex = places.firstIndex(where: { $0.id == selectedPlace?.id }) {
+            return cardListViewModel.cards[selectedPlaceIndex].isBookmarked
+        }
+        return false
+    }
+
     }
 
