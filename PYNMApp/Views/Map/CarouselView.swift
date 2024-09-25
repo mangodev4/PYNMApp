@@ -28,7 +28,16 @@ struct CarouselView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 350, height: 100)
-                        Text(card.imageName)
+                        HStack {
+                            Text(card.imageName)
+                            // MARK: Bookmark Button
+                            Button {
+                                viewModel.toggleBookmark(for: card.id)
+                            } label: {
+                                Image(systemName: card.isBookmarked ?  "bookmark.fill" : "bookmark")
+                                    .foregroundColor(card.isBookmarked ? .yellow : .gray)
+                            }
+                        }
                         Text("02-1234-1234")
                         Text("서울특별시 중구 창경궁로 62-29")
                     }
