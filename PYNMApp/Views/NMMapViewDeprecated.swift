@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct NMMapView: View {
+struct NMMapViewDeprecated: View {
     @StateObject private var mapViewModel = MapViewModel()
     @StateObject private var cardListViewModel = CardListViewModel()
     @StateObject var navigationManager = NavigationManager()
@@ -47,7 +47,7 @@ struct NMMapView: View {
                 }
                 .edgesIgnoringSafeArea(.all)
                 
-                VStack {
+//                VStack {
 //                    Header()
 //                        .frame(height: 60)
 //                    
@@ -97,7 +97,7 @@ struct NMMapView: View {
 //                .presentationDragIndicator(.hidden)
 //                .interactiveDismissDisabled(true)
 //        }
-    }
+//    }
 
 }
 
