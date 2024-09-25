@@ -14,7 +14,7 @@ struct NMMapView: View {
     @StateObject private var cardListViewModel = CardListViewModel()
     
     var body: some View {
-        ZStack(alignment: .top) {
+        ZStack(alignment: .bottom) {
             Map(
                 coordinateRegion: $mapViewModel.region,
                 annotationItems: mapViewModel.places
@@ -38,34 +38,34 @@ struct NMMapView: View {
                     }
                 }
             }
-//            .onAppear {
-//                mapViewModel.loadPlaces()
-//                mapViewModel.isShowModal = true
-//            }
+            //            .onAppear {
+            //                mapViewModel.loadPlaces()
+            //                mapViewModel.isShowModal = true
+            //            }
             .edgesIgnoringSafeArea(.all)
             
             if mapViewModel.isShowModal {
-                            Color.black.opacity(0.4)
-                                .ignoresSafeArea()
-                                .onTapGesture {
-                                    withAnimation(.none) {
-                                        mapViewModel.isShowModal.toggle()
-                                    }
-                                }
-                            
-                            CarouselView(viewModel: cardListViewModel, mapViewModel: mapViewModel)
-                                .transition(.move(edge: .bottom))
-                                .animation(.none)
-                        }
+                //                            Color.black.opacity(0.4)
+                //                                .ignoresSafeArea()
+                //                                .onTapGesture {
+                //                                    withAnimation(.none) {
+                //                                        mapViewModel.isShowModal.toggle()
+                //                                    }
+                //                                }
+                
+                CarouselView(viewModel: cardListViewModel, mapViewModel: mapViewModel)
+                    .transition(.move(edge: .bottom))
+                    .animation(mapViewModel.isShowModal ? .none : .default, value: mapViewModel.isShowModal)
+            }
         }
         .onAppear {
             mapViewModel.loadPlaces()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        withAnimation(.none) {
-                            mapViewModel.isShowModal.toggle()
-                        }
-                    }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                withAnimation(.none) {
+                    mapViewModel.isShowModal = true
                 }
+            }
+        }
     }
 }
 
