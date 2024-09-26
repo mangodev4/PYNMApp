@@ -10,8 +10,20 @@ import SwiftUI
 class NavigationManager: ObservableObject {
     @Published var path = NavigationPath()
     
-    func navigateToCardDetail(card: Card) {
-        path.append(card)
+//    func navigateToCardDetail(card: Card) {
+//        path.append(card)
+//    }
+    
+    func navigateToMapView(selectedCard: Card) {
+        path.append(selectedCard)
+    }
+    
+    func navigateToNMListView() {
+        path.append("NMListView")
+    }
+
+    func navigateToNMMapView() {
+        path.append("NMMapView")
     }
     
     func goBack() {
@@ -25,6 +37,6 @@ class NavigationManager: ObservableObject {
     }
     
     func resetNavigation() {
-        path.removeLast(path.count)
+        path = NavigationPath()
     }
 }

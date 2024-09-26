@@ -1,21 +1,21 @@
+////
+////  MainView.swift
+////  PYNMApp
+////
+////  Created by Yujin Son on 9/12/24.
+////
 //
-//  MainView.swift
-//  PYNMApp
+//import SwiftUI
 //
-//  Created by Yujin Son on 9/12/24.
+//struct MainView: View {
+//    var body: some View {
+//        ZStack {
+//            MapView()
+//            NMListView()
+//        }
+//    }
+//}
 //
-
-import SwiftUI
-
-struct MainView: View {
-    var body: some View {
-        ZStack {
-            MapView()
-            NMListView()
-        }
-    }
-}
-
-#Preview {
-    MainView()
-}
+//#Preview {
+//    MainView()
+//}
