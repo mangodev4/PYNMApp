@@ -38,14 +38,14 @@ struct CarouselView: View {
                                     .foregroundColor(card.isBookmarked ? .yellow : .gray)
                             }
                         }
-                        Text("02-1234-1234")
+                        Text(card.phoneNumber)
                         Text(card.address)
                     }
                     .tag(index)
                 }
             }
             .tabViewStyle(PageTabViewStyle())
-            .frame(height: 200)
+            .frame(height: 220)
             .onChange(of: selectedIndex) { newIndex in
                 if newIndex < sampleNMPlaces.count {
                     let selectedPlace = sampleNMPlaces[newIndex]
